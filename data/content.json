@@ -1,0 +1,192 @@
+{
+  "hero": {
+    "title": {
+      "en": "Graffiti workshops in Montreal",
+      "fr": "Ateliers de graffiti à Montréal"
+    },
+    "tagline": {
+      "en": "Learn the craft, find your style, and put up your first piece — taught by working graffiti artists who treat fundamentals as seriously as flair.",
+      "fr": "Apprenez la technique, trouvez votre style et réalisez votre première pièce — enseigné par des artistes graffiti professionnels qui prennent les bases aussi au sérieux que le style."
+    },
+    "ctaLabel": {
+      "en": "Book a workshop",
+      "fr": "Réserver un atelier"
+    },
+    "backgroundImage": "https://picsum.photos/seed/graffiti-hero/1920/1080"
+  },
+  "about": {
+    "mission": {
+      "en": "To demystify graffiti as both an art form and a discipline. We teach with respect for the culture, focus on technique, and a no-judgement approach for total beginners.",
+      "fr": "Démystifier le graffiti en tant que forme d'art et discipline. Nous enseignons dans le respect de la culture, avec un accent sur la technique et une approche sans jugement pour les débutants."
+    },
+    "vision": {
+      "en": "A Montreal where street art is understood, valued, and accessible — where anyone curious enough to try can pick up a can and make their first mark.",
+      "fr": "Un Montréal où l'art urbain est compris, valorisé et accessible — où quiconque a la curiosité d'essayer peut prendre une canette et faire sa première marque."
+    },
+    "team": [
+      {
+        "id": "founder",
+        "name": "Dante",
+        "role": {
+          "en": "Founder & Lead Instructor",
+          "fr": "Fondateur et instructeur principal"
+        },
+        "bio": {
+          "en": "Twenty years on the wall. Started teaching workshops to share the craft he wishes someone had taught him starting out.",
+          "fr": "Vingt ans sur le mur. A commencé à donner des ateliers pour partager le savoir-faire qu'il aurait aimé qu'on lui transmette à ses débuts."
+        },
+        "photo": "https://picsum.photos/seed/g101-team-1/600/600"
+      }
+    ],
+    "pastProjects": [
+      {
+        "id": "mile-end-mural",
+        "title": {
+          "en": "Mile-End Mural",
+          "fr": "Murale du Mile-End"
+        },
+        "description": {
+          "en": "A 40-foot collaborative wall on Saint-Laurent in summer 2024.",
+          "fr": "Un mur collaboratif de 40 pieds sur Saint-Laurent à l'été 2024."
+        },
+        "image": "https://picsum.photos/seed/g101-proj-1/800/600"
+      },
+      {
+        "id": "ubisoft-workshop",
+        "title": {
+          "en": "Corporate Workshop · Ubisoft",
+          "fr": "Atelier corporatif · Ubisoft"
+        },
+        "description": {
+          "en": "A team-building day for 25 employees at the Mile-End studio.",
+          "fr": "Une journée de consolidation d'équipe pour 25 employés au studio du Mile-End."
+        },
+        "image": "https://picsum.photos/seed/g101-proj-2/800/600"
+      },
+      {
+        "id": "youth-program",
+        "title": {
+          "en": "Plateau Youth Program",
+          "fr": "Programme jeunesse du Plateau"
+        },
+        "description": {
+          "en": "Six-week beginner program at a local community centre for ages 14–18.",
+          "fr": "Programme débutant de six semaines dans un centre communautaire local pour les 14–18 ans."
+        },
+        "image": "https://picsum.photos/seed/g101-proj-3/800/600"
+      }
+    ]
+  },
+  "services": [
+    {
+      "id": "beginner-workshop",
+      "name": {
+        "en": "Beginner Workshop",
+        "fr": "Atelier débutant"
+      },
+      "description": {
+        "en": "A 3-hour group session for first-timers. Covers safety, can control, and letterform fundamentals — and finishes with each participant putting up their first piece on a practice wall.",
+        "fr": "Une session de groupe de 3 heures pour les débutants. Couvre la sécurité, le contrôle de la canette et les bases de la typographie — et se termine par la réalisation d'une première pièce sur un mur d'entraînement."
+      },
+      "price": "$85 / person",
+      "image": "https://picsum.photos/seed/g101-svc-1/800/600"
+    },
+    {
+      "id": "private-session",
+      "name": {
+        "en": "Private Session",
+        "fr": "Session privée"
+      },
+      "description": {
+        "en": "1-on-1 instruction tailored to your goals — whether you're a hobbyist, prepping for a commission, or pushing your own style further.",
+        "fr": "Cours individuel adapté à vos objectifs — que vous soyez amateur, en préparation d'une commande ou en train de pousser votre propre style."
+      },
+      "price": "$150 / hour",
+      "image": "https://picsum.photos/seed/g101-svc-2/800/600"
+    },
+    {
+      "id": "group-event",
+      "name": {
+        "en": "Group Event",
+        "fr": "Événement de groupe"
+      },
+      "description": {
+        "en": "Birthdays, bachelor parties, corporate offsites. Customized for your group size, skill level, and venue. We handle materials and clean-up.",
+        "fr": "Anniversaires, enterrements de vie de garçon, sorties d'entreprise. Adapté à la taille de votre groupe, au niveau et au lieu. Nous fournissons le matériel et nous occupons du nettoyage."
+      },
+      "price": "Starting at $400",
+      "image": "https://picsum.photos/seed/g101-svc-3/800/600"
+    }
+  ],
+  "store": [
+    {
+      "id": "spray-cap-kit",
+      "name": {
+        "en": "Beginner Spray Cap Kit",
+        "fr": "Kit de capuchons débutant"
+      },
+      "description": {
+        "en": "A curated assortment of 10 caps covering a range of widths — everything you need to start exploring different lines and fills.",
+        "fr": "Un assortiment de 10 capuchons couvrant différentes largeurs — tout ce qu'il faut pour commencer à explorer différents traits et remplissages."
+      },
+      "price": "$35",
+      "image": "https://picsum.photos/seed/g101-store-1/600/600"
+    },
+    {
+      "id": "original-print",
+      "name": {
+        "en": "Original Print",
+        "fr": "Estampe originale"
+      },
+      "description": {
+        "en": "Limited-run prints of past Graffiti 101 pieces. Signed and numbered, printed on heavyweight matte stock.",
+        "fr": "Estampes en série limitée de pièces passées de Graffiti 101. Signées et numérotées, imprimées sur papier mat épais."
+      },
+      "price": "$60",
+      "image": "https://picsum.photos/seed/g101-store-2/600/600"
+    },
+    {
+      "id": "branded-tee",
+      "name": {
+        "en": "Branded T-Shirt",
+        "fr": "T-shirt logo"
+      },
+      "description": {
+        "en": "Heavyweight cotton tee with the Graffiti 101 throw-up across the chest. Available in S–XXL.",
+        "fr": "T-shirt en coton épais avec le throw-up Graffiti 101 sur la poitrine. Tailles S à TTG."
+      },
+      "price": "$30",
+      "image": "https://picsum.photos/seed/g101-store-3/600/600"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "first-review",
+      "quote": {
+        "en": "Honestly the most fun I've had in a workshop in years. Walked in scared of the can, walked out with my first piece on a wall.",
+        "fr": "Honnêtement l'atelier le plus amusant que j'ai fait depuis des années. Je suis arrivé intimidé par la canette, je suis reparti avec ma première pièce sur un mur."
+      },
+      "author": "Sam L.",
+      "role": {
+        "en": "Beginner Workshop · 2024",
+        "fr": "Atelier débutant · 2024"
+      }
+    }
+  ],
+  "contact": {
+    "intro": {
+      "en": "Booking a workshop, asking about a private session, or buying something from the store? Send a message — we read every one.",
+      "fr": "Réservation d'un atelier, question sur une session privée ou achat d'un article de la boutique? Envoyez-nous un message — nous lisons chacun d'eux."
+    },
+    "recipientEmail": "dantecaloia@yahoo.ca"
+  },
+  "socials": [
+    { "platform": "instagram", "url": "https://instagram.com" }
+  ],
+  "footer": {
+    "tagline": {
+      "en": "Teaching the craft. Respecting the culture.",
+      "fr": "Enseigner la technique. Respecter la culture."
+    }
+  }
+}
