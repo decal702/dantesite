@@ -1,11 +1,11 @@
 {
   "hero": {
     "title": {
-      "en": "Graffiti workshops in Montreal",
+      "en": "Graffiti Workshops in Montreal",
       "fr": "Ateliers de graffiti à Montréal"
     },
     "tagline": {
-      "en": "Learn the craft, find your style, and put up your first piece — taught by working graffiti artists who treat fundamentals as seriously as flair.",
+      "en": "gaga",
       "fr": "Apprenez la technique, trouvez votre style et réalisez votre première pièce — enseigné par des artistes graffiti professionnels qui prennent les bases aussi au sérieux que le style."
     },
     "ctaLabel": {
@@ -181,7 +181,10 @@
     "recipientEmail": "dantecaloia@yahoo.ca"
   },
   "socials": [
-    { "platform": "instagram", "url": "https://instagram.com" }
+    {
+      "platform": "instagram",
+      "url": "https://instagram.com"
+    }
   ],
   "footer": {
     "tagline": {
