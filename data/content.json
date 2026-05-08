@@ -5,7 +5,7 @@
       "fr": "Ateliers de graffiti à Montréal"
     },
     "tagline": {
-      "en": "gaga",
+      "en": "GRAFFITI 101 is an Arts workshop project founded by Montreal-based multidisciplinary artist danté.",
       "fr": "Apprenez la technique, trouvez votre style et réalisez votre première pièce — enseigné par des artistes graffiti professionnels qui prennent les bases aussi au sérieux que le style."
     },
     "ctaLabel": {
@@ -16,7 +16,7 @@
   },
   "about": {
     "mission": {
-      "en": "To demystify graffiti as both an art form and a discipline. We teach with respect for the culture, focus on technique, and a no-judgement approach for total beginners.",
+      "en": "We aim to share the gift of Graffiti-based art mediums and creative expression with the next generation, through safe, educational and engaging workshops.",
       "fr": "Démystifier le graffiti en tant que forme d'art et discipline. Nous enseignons dans le respect de la culture, avec un accent sur la technique et une approche sans jugement pour les débutants."
     },
     "vision": {
@@ -35,7 +35,7 @@
           "en": "Twenty years on the wall. Started teaching workshops to share the craft he wishes someone had taught him starting out.",
           "fr": "Vingt ans sur le mur. A commencé à donner des ateliers pour partager le savoir-faire qu'il aurait aimé qu'on lui transmette à ses débuts."
         },
-        "photo": "https://picsum.photos/seed/g101-team-1/600/600"
+        "photo": "https://res.cloudinary.com/dawt0askh/image/upload/v1778282198/graffiti101/jt5ddxevk3hogeg5rq8l.jpg"
       }
     ],
     "pastProjects": [
