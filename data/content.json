@@ -149,7 +149,9 @@
       "lng": 0
     },
     "openingHours": [
-      ""
+      "Mo-Tues Closed",
+      "We-Fr 9:00-18:00",
+      "Sa-Su 8:00-13:00"
     ],
     "priceRange": "$$"
   },
