@@ -143,11 +143,13 @@
     "addressRegion": "QC",
     "postalCode": "",
     "addressCountry": "CA",
-    "telephone": "",
-    "geo": { "lat": 45.5231, "lng": -73.5817 },
+    "telephone": "1-647-968-4578",
+    "geo": {
+      "lat": 0,
+      "lng": 0
+    },
     "openingHours": [
-      "Mo-Fr 10:00-18:00",
-      "Sa 11:00-17:00"
+      ""
     ],
     "priceRange": "$$"
   },
@@ -237,45 +239,84 @@
   },
   "labels": {
     "about": {
-      "eyebrow": { "en": "About", "fr": "À propos" },
-      "title": { "en": "Who we are", "fr": "Qui sommes-nous" }
+      "eyebrow": {
+        "en": "About",
+        "fr": "À propos"
+      },
+      "title": {
+        "en": "Who we are",
+        "fr": "Qui sommes-nous"
+      }
     },
     "services": {
-      "eyebrow": { "en": "Services", "fr": "Services" },
-      "title": { "en": "What we offer", "fr": "Ce que nous offrons" },
+      "eyebrow": {
+        "en": "Services",
+        "fr": "Services"
+      },
+      "title": {
+        "en": "What we offer",
+        "fr": "Ce que nous offrons"
+      },
       "intro": {
         "en": "From a first-timer's introduction to private coaching for working writers — pricing in Canadian dollars, materials always included.",
         "fr": "De l'introduction pour débutants au coaching privé pour artistes établis — prix en dollars canadiens, matériel toujours inclus."
       }
     },
     "store": {
-      "title": { "en": "Store", "fr": "Boutique" }
+      "title": {
+        "en": "Store",
+        "fr": "Boutique"
+      }
     },
     "testimonials": {
-      "title": { "en": "Reviews", "fr": "Avis" }
+      "title": {
+        "en": "Reviews",
+        "fr": "Avis"
+      }
     },
     "faq": {
-      "eyebrow": { "en": "FAQ", "fr": "FAQ" },
-      "title": { "en": "Common questions", "fr": "Questions fréquentes" },
+      "eyebrow": {
+        "en": "FAQ",
+        "fr": "FAQ"
+      },
+      "title": {
+        "en": "Common questions",
+        "fr": "Questions fréquentes"
+      },
       "intro": {
         "en": "If your question isn't answered below, send us a message.",
         "fr": "Si vous ne trouvez pas votre réponse ci-dessous, écrivez-nous."
       }
     },
     "socials": {
-      "eyebrow": { "en": "Follow", "fr": "Suivez-nous" },
-      "title": { "en": "Stay in the loop", "fr": "Restez à l'affût" },
+      "eyebrow": {
+        "en": "Follow",
+        "fr": "Suivez-nous"
+      },
+      "title": {
+        "en": "Stay in the loop",
+        "fr": "Restez à l'affût"
+      },
       "intro": {
         "en": "Latest pieces, workshop announcements, behind-the-scenes from sessions.",
         "fr": "Dernières pièces, annonces d'ateliers, coulisses des sessions."
       }
     },
     "contact": {
-      "eyebrow": { "en": "Contact", "fr": "Contact" },
-      "title": { "en": "Drop us a line", "fr": "Écrivez-nous" }
+      "eyebrow": {
+        "en": "Contact",
+        "fr": "Contact"
+      },
+      "title": {
+        "en": "Drop us a line",
+        "fr": "Écrivez-nous"
+      }
     },
     "organizations": {
-      "eyebrow": { "en": "For organizations", "fr": "Pour les organismes" },
+      "eyebrow": {
+        "en": "For organizations",
+        "fr": "Pour les organismes"
+      },
       "title": {
         "en": "Workshops for schools & youth groups",
         "fr": "Ateliers pour les écoles et les groupes de jeunes"
