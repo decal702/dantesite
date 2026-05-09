@@ -40,7 +40,7 @@ export default function SafeImage({
           <circle cx="8.5" cy="8.5" r="1.5" fill="currentColor" />
           <path d="M21 15.5l-4.5-4.5L6 21" />
         </svg>
-        <span className="font-heading text-[10px] uppercase tracking-widest">
+        <span className="font-sans text-[10px] uppercase tracking-widest">
           {placeholderLabel}
         </span>
       </div>

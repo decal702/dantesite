@@ -5,6 +5,20 @@ import type { Lang } from "@/lib/content";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+const VENUE_LABELS: Record<string, string> = {
+  "our-studio": "Mile-End studio (yours)",
+  "our-site": "At their site",
+  either: "Either works",
+};
+
+const BUDGET_LABELS: Record<string, string> = {
+  "under-500": "Under $500",
+  "500-1000": "$500 – $1,000",
+  "1000-2500": "$1,000 – $2,500",
+  "over-2500": "$2,500+",
+  open: "Open / not sure yet",
+};
+
 export async function POST(req: NextRequest) {
   let body: Record<string, unknown>;
   try {
@@ -15,32 +29,50 @@ export async function POST(req: NextRequest) {
 
   const honeypot = String(body.website ?? "");
   if (honeypot) {
-    // Bot: pretend success without sending.
     return NextResponse.json({ ok: true });
   }
 
-  const name = String(body.name ?? "").trim();
+  const organizationName = String(body.organizationName ?? "").trim();
+  const contactName = String(body.contactName ?? "").trim();
   const email = String(body.email ?? "").trim();
   const phone = String(body.phone ?? "").trim();
-  const subject = String(body.subject ?? "").trim();
+  const groupSize = String(body.groupSize ?? "").trim();
+  const ageRange = String(body.ageRange ?? "").trim();
+  const preferredDates = String(body.preferredDates ?? "").trim();
+  const venue = String(body.venue ?? "").trim();
+  const budgetRange = String(body.budgetRange ?? "").trim();
   const message = String(body.message ?? "").trim();
   const lang: Lang = body.lang === "fr" ? "fr" : "en";
 
-  if (!name || !email || !subject || !message) {
+  if (
+    !organizationName ||
+    !contactName ||
+    !email ||
+    !groupSize ||
+    !ageRange ||
+    !venue
+  ) {
     return NextResponse.json(
-      { error: "All fields are required." },
+      { error: "Required fields missing." },
       { status: 400 }
     );
   }
+
   if (
-    name.length > 200 ||
+    organizationName.length > 200 ||
+    contactName.length > 200 ||
     email.length > 200 ||
     phone.length > 50 ||
-    subject.length > 300 ||
+    groupSize.length > 80 ||
+    ageRange.length > 80 ||
+    preferredDates.length > 200 ||
+    venue.length > 50 ||
+    budgetRange.length > 50 ||
     message.length > 5000
   ) {
     return NextResponse.json({ error: "Field too long." }, { status: 400 });
   }
+
   if (!EMAIL_RE.test(email)) {
     return NextResponse.json(
       { error: "Invalid email address." },
@@ -60,18 +92,28 @@ export async function POST(req: NextRequest) {
   const resend = new Resend(apiKey);
   const recipient = content.contact.recipientEmail;
 
+  const venueLabel = VENUE_LABELS[venue] || venue;
+  const budgetLabel = budgetRange
+    ? BUDGET_LABELS[budgetRange] || budgetRange
+    : "Not specified";
+
   try {
     const result = await resend.emails.send({
       from: `Graffiti 101 <${fromEmail}>`,
       to: recipient,
       replyTo: email,
-      subject: `[Graffiti 101] ${subject}`,
+      subject: `[Quote Request] ${organizationName} — group of ${groupSize}`,
       text:
-        `New message from the Graffiti 101 site (${lang.toUpperCase()})\n\n` +
-        `From: ${name} <${email}>\n` +
+        `New quote request from the Graffiti 101 site (${lang.toUpperCase()})\n\n` +
+        `Organization: ${organizationName}\n` +
+        `Contact: ${contactName} <${email}>\n` +
         (phone ? `Phone: ${phone}\n` : "") +
-        `Subject: ${subject}\n\n` +
-        `${message}\n`,
+        `Group size: ${groupSize}\n` +
+        `Age range: ${ageRange}\n` +
+        (preferredDates ? `Preferred dates: ${preferredDates}\n` : "") +
+        `Venue: ${venueLabel}\n` +
+        `Budget: ${budgetLabel}\n` +
+        (message ? `\nMessage:\n${message}\n` : ""),
     });
     if (result.error) {
       return NextResponse.json(

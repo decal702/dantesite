@@ -76,7 +76,7 @@ export default function UpcomingWorkshops({
           </p>
           <h2
             id="schedule-title"
-            className="mt-2 font-heading text-3xl sm:text-5xl tracking-tight"
+            className="mt-2 font-sans text-3xl sm:text-5xl tracking-tight"
           >
             {ui.title[lang]}
           </h2>
@@ -97,14 +97,14 @@ export default function UpcomingWorkshops({
                     className="absolute top-0 left-0 z-10 w-3 h-3 bg-brand-red"
                     aria-hidden
                   />
-                  <p className="font-heading text-2xl tracking-wide text-brand-red">
+                  <p className="font-sans text-2xl tracking-wide text-brand-red">
                     {formatDate(w.date, lang)}
                   </p>
                   {w.time && (
                     <p className="text-sm text-brand-black/70 mt-1">{w.time}</p>
                   )}
                   {serviceName && (
-                    <p className="font-heading text-lg tracking-wide mt-3">
+                    <p className="font-sans text-lg tracking-wide mt-3">
                       {serviceName}
                     </p>
                   )}

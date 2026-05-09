@@ -23,7 +23,7 @@ export default function Socials({
         </p>
         <h2
           id="socials-title"
-          className="mt-2 font-heading text-2xl sm:text-4xl tracking-tight"
+          className="mt-2 font-sans text-2xl sm:text-4xl tracking-tight"
         >
           {ui.socials.title[lang]}
         </h2>

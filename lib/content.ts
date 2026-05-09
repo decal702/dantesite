@@ -57,6 +57,32 @@ export type UpcomingWorkshop = {
   note?: Bilingual;
 };
 
+export type FaqItem = {
+  id: string;
+  question: Bilingual;
+  answer: Bilingual;
+};
+
+export type OrganizationsContent = {
+  intro: Bilingual;
+  outcomes: Array<{ id: string; text: Bilingual }>;
+  practicalItems: Array<{ id: string; text: Bilingual }>;
+  pdfUrl: { en: string; fr: string };
+};
+
+export type BusinessInfo = {
+  legalName: string;
+  streetAddress: string;
+  addressLocality: string;
+  addressRegion: string;
+  postalCode: string;
+  addressCountry: string;
+  telephone: string;
+  geo: { lat: number; lng: number };
+  openingHours: string[];
+  priceRange: string;
+};
+
 export type Content = {
   hero: {
     title: Bilingual;
@@ -79,6 +105,9 @@ export type Content = {
   };
   socials: SocialLink[];
   upcomingWorkshops: UpcomingWorkshop[];
+  faq: FaqItem[];
+  business: BusinessInfo;
+  organizations: OrganizationsContent;
   footer: {
     tagline: Bilingual;
   };

@@ -1,44 +1,76 @@
 "use client";
 
-import { useEffect, useState, useTransition } from "react";
-import { setLanguage } from "../actions";
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import type { Lang } from "@/lib/content";
 import { ui } from "@/lib/i18n";
 
-const SECTION_IDS = ["home", "about", "services", "store", "testimonials", "contact"] as const;
-type SectionId = (typeof SECTION_IDS)[number];
+type AnchorItem = { kind: "anchor"; id: string; labelKey: keyof typeof ui.nav };
+type PageItem = { kind: "page"; path: string; labelKey: keyof typeof ui.nav };
+type Item = AnchorItem | PageItem;
+
+const ITEMS: Item[] = [
+  { kind: "anchor", id: "home", labelKey: "home" },
+  { kind: "anchor", id: "about", labelKey: "about" },
+  { kind: "anchor", id: "services", labelKey: "services" },
+  { kind: "anchor", id: "schedule", labelKey: "schedule" },
+  { kind: "page", path: "store", labelKey: "store" },
+  { kind: "page", path: "faq", labelKey: "faq" },
+  { kind: "page", path: "for-organizations", labelKey: "forOrganizations" },
+  { kind: "anchor", id: "contact", labelKey: "contact" },
+];
+
+const ANCHOR_IDS = ITEMS.flatMap((i) => (i.kind === "anchor" ? [i.id] : []));
 
 export default function Nav({ lang }: { lang: Lang }) {
-  const [active, setActive] = useState<SectionId>("home");
+  const pathname = usePathname();
+  const [activeAnchor, setActiveAnchor] = useState<string>("home");
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [pending, startTransition] = useTransition();
+
+  // Strip locale prefix to detect subpage (about / store / faq / for-organizations).
+  const subpath = pathname.replace(/^\/(en|fr)/, "").replace(/^\//, "");
+  const isHome = subpath === "";
 
   useEffect(() => {
+    if (!isHome) return;
     const observer = new IntersectionObserver(
       (entries) => {
         const visible = entries
           .filter((e) => e.isIntersecting)
           .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-        if (visible) setActive(visible.target.id as SectionId);
+        if (visible) setActiveAnchor(visible.target.id);
       },
       { rootMargin: "-40% 0px -55% 0px", threshold: [0, 0.25, 0.5, 0.75, 1] }
     );
-    SECTION_IDS.forEach((id) => {
+    ANCHOR_IDS.forEach((id) => {
       const el = document.getElementById(id);
       if (el) observer.observe(el);
     });
     return () => observer.disconnect();
-  }, []);
+  }, [isHome]);
 
-  function handleLangChange(next: Lang) {
-    if (next === lang) return;
-    if (typeof window !== "undefined") {
-      window.localStorage.setItem("g101_lang", next);
-    }
-    startTransition(() => {
-      setLanguage(next);
-    });
+  // Persist language choice so the proxy keeps returning users to their
+  // preferred locale when they next hit `/`.
+  useEffect(() => {
+    document.cookie = `g101_lang=${lang}; path=/; max-age=${60 * 60 * 24 * 365}; samesite=lax`;
+  }, [lang]);
+
+  function hrefFor(item: Item): string {
+    if (item.kind === "page") return `/${lang}/${item.path}`;
+    // anchor: #id when on home, /lang#id when elsewhere (so it navigates back).
+    return isHome ? `#${item.id}` : `/${lang}#${item.id}`;
   }
+
+  function isActive(item: Item): boolean {
+    if (item.kind === "page") return subpath === item.path;
+    if (!isHome) return false;
+    return activeAnchor === item.id;
+  }
+
+  const homeLogoHref = isHome ? "#home" : `/${lang}`;
+  const enHref = `/en${subpath ? `/${subpath}` : ""}`;
+  const frHref = `/fr${subpath ? `/${subpath}` : ""}`;
 
   return (
     <header className="sticky top-0 z-50 bg-brand-red/90 backdrop-blur border-b border-brand-yellow/10">
@@ -46,36 +78,37 @@ export default function Nav({ lang }: { lang: Lang }) {
         aria-label="Primary"
         className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4"
       >
-        <a
-          href="#home"
+        <Link
+          href={homeLogoHref}
           className="font-display text-2xl tracking-widest text-brand-yellow hover:text-brand-black transition-colors"
           onClick={() => setMobileOpen(false)}
         >
           GRAFFITI <span className="text-brand-black">101</span>
-        </a>
+        </Link>
 
         <ul className="hidden md:flex items-center gap-1">
-          {SECTION_IDS.map((id) => {
-            const isActive = active === id;
+          {ITEMS.map((item) => {
+            const active = isActive(item);
+            const key = item.kind === "page" ? `p-${item.path}` : `a-${item.id}`;
             return (
-              <li key={id}>
-                <a
-                  href={`#${id}`}
-                  aria-current={isActive ? "true" : undefined}
+              <li key={key}>
+                <Link
+                  href={hrefFor(item)}
+                  aria-current={active ? "true" : undefined}
                   className={`px-3 py-2 text-sm font-medium uppercase tracking-wider transition-colors ${
-                    isActive
+                    active
                       ? "text-brand-black"
                       : "text-brand-yellow/70 hover:text-brand-yellow"
                   }`}
                 >
-                  {ui.nav[id][lang]}
+                  {ui.nav[item.labelKey][lang]}
                   <span
                     className={`block h-0.5 mt-0.5 transition-all ${
-                      isActive ? "bg-brand-black" : "bg-transparent"
+                      active ? "bg-brand-black" : "bg-transparent"
                     }`}
                     aria-hidden
                   />
-                </a>
+                </Link>
               </li>
             );
           })}
@@ -87,31 +120,31 @@ export default function Nav({ lang }: { lang: Lang }) {
             role="group"
             aria-label={ui.language.label[lang]}
           >
-            <button
-              type="button"
-              onClick={() => handleLangChange("en")}
-              disabled={pending}
+            <Link
+              href={enHref}
+              hrefLang="en"
+              prefetch={false}
               className={`px-2 py-1 ${
                 lang === "en" ? "text-brand-yellow" : "text-brand-yellow/40 hover:text-brand-yellow"
               }`}
-              aria-pressed={lang === "en"}
+              aria-current={lang === "en" ? "true" : undefined}
             >
               EN
-            </button>
+            </Link>
             <span className="text-brand-yellow/30" aria-hidden>
               /
             </span>
-            <button
-              type="button"
-              onClick={() => handleLangChange("fr")}
-              disabled={pending}
+            <Link
+              href={frHref}
+              hrefLang="fr"
+              prefetch={false}
               className={`px-2 py-1 ${
                 lang === "fr" ? "text-brand-yellow" : "text-brand-yellow/40 hover:text-brand-yellow"
               }`}
-              aria-pressed={lang === "fr"}
+              aria-current={lang === "fr" ? "true" : undefined}
             >
               FR
-            </button>
+            </Link>
           </div>
 
           <button
@@ -155,38 +188,44 @@ export default function Nav({ lang }: { lang: Lang }) {
           className="md:hidden border-t border-brand-yellow/10 bg-brand-red"
         >
           <ul className="px-4 py-2">
-            {SECTION_IDS.map((id) => (
-              <li key={id}>
-                <a
-                  href={`#${id}`}
-                  onClick={() => setMobileOpen(false)}
-                  className={`block px-2 py-3 text-base font-medium uppercase tracking-wider border-b border-brand-yellow/10 last:border-0 ${
-                    active === id ? "text-brand-black" : "text-brand-yellow"
-                  }`}
-                >
-                  {ui.nav[id][lang]}
-                </a>
-              </li>
-            ))}
+            {ITEMS.map((item) => {
+              const active = isActive(item);
+              const key = item.kind === "page" ? `p-${item.path}` : `a-${item.id}`;
+              return (
+                <li key={key}>
+                  <Link
+                    href={hrefFor(item)}
+                    onClick={() => setMobileOpen(false)}
+                    className={`block px-2 py-3 text-base font-medium uppercase tracking-wider border-b border-brand-yellow/10 last:border-0 ${
+                      active ? "text-brand-black" : "text-brand-yellow"
+                    }`}
+                  >
+                    {ui.nav[item.labelKey][lang]}
+                  </Link>
+                </li>
+              );
+            })}
             <li className="flex gap-3 px-2 py-3 text-sm font-semibold uppercase tracking-wider">
-              <button
-                type="button"
-                onClick={() => handleLangChange("en")}
-                disabled={pending}
+              <Link
+                href={enHref}
+                hrefLang="en"
+                prefetch={false}
+                onClick={() => setMobileOpen(false)}
                 className={lang === "en" ? "text-brand-yellow" : "text-brand-yellow/40"}
-                aria-pressed={lang === "en"}
+                aria-current={lang === "en" ? "true" : undefined}
               >
                 EN
-              </button>
-              <button
-                type="button"
-                onClick={() => handleLangChange("fr")}
-                disabled={pending}
+              </Link>
+              <Link
+                href={frHref}
+                hrefLang="fr"
+                prefetch={false}
+                onClick={() => setMobileOpen(false)}
                 className={lang === "fr" ? "text-brand-yellow" : "text-brand-yellow/40"}
-                aria-pressed={lang === "fr"}
+                aria-current={lang === "fr" ? "true" : undefined}
               >
                 FR
-              </button>
+              </Link>
             </li>
           </ul>
         </div>

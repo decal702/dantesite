@@ -23,7 +23,7 @@ export default function About({
           </p>
           <h2
             id="about-title"
-            className="mt-2 font-heading text-3xl sm:text-5xl tracking-tight"
+            className="mt-2 font-sans text-3xl sm:text-5xl tracking-tight"
           >
             {ui.about.title[lang]}
           </h2>
@@ -32,7 +32,7 @@ export default function About({
 
         <Reveal delay={100} className="mt-10 grid md:grid-cols-2 gap-6">
           <article className="bg-brand-black text-brand-yellow border border-brand-black/10 flex flex-col">
-            <h3 className="bg-brand-yellow text-brand-black font-heading text-sm uppercase tracking-widest px-5 py-2 border-b border-brand-black">
+            <h3 className="bg-brand-yellow text-brand-black font-sans text-sm uppercase tracking-widest px-5 py-2 border-b border-brand-black">
               {ui.about.missionHeading[lang]}
             </h3>
             <p className="p-5 sm:p-6 text-lg leading-relaxed">
@@ -40,7 +40,7 @@ export default function About({
             </p>
           </article>
           <article className="bg-brand-black text-brand-yellow border border-brand-black/10 flex flex-col">
-            <h3 className="bg-brand-yellow text-brand-black font-heading text-sm uppercase tracking-widest px-5 py-2 border-b border-brand-black">
+            <h3 className="bg-brand-yellow text-brand-black font-sans text-sm uppercase tracking-widest px-5 py-2 border-b border-brand-black">
               {ui.about.visionHeading[lang]}
             </h3>
             <p className="p-5 sm:p-6 text-lg leading-relaxed">
@@ -51,7 +51,7 @@ export default function About({
 
         {data.team.length > 0 && (
           <Reveal delay={150} className="mt-16">
-            <h3 className="font-heading text-2xl sm:text-3xl tracking-tight">
+            <h3 className="font-sans text-2xl sm:text-3xl tracking-tight">
               {ui.about.teamHeading[lang]}
             </h3>
             <ul className="mt-6 flex flex-wrap justify-center gap-6">
@@ -75,7 +75,7 @@ export default function About({
                     />
                   </div>
                   <div className="p-5">
-                    <p className="font-heading text-2xl tracking-wide">{m.name}</p>
+                    <p className="font-sans text-2xl tracking-wide">{m.name}</p>
                     <p className="text-sm text-brand-red font-semibold mt-1">
                       {m.role[lang]}
                     </p>
@@ -89,7 +89,7 @@ export default function About({
 
         {data.pastProjects.length > 0 && (
           <Reveal delay={150} className="mt-16">
-            <h3 className="font-heading text-2xl sm:text-3xl tracking-tight">
+            <h3 className="font-sans text-2xl sm:text-3xl tracking-tight">
               {ui.about.projectsHeading[lang]}
             </h3>
             <ul className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -113,7 +113,7 @@ export default function About({
                     />
                   </div>
                   <div className="p-5">
-                    <p className="font-heading text-xl tracking-wide">
+                    <p className="font-sans text-xl tracking-wide">
                       {p.title[lang]}
                     </p>
                     <p className="mt-2 text-base leading-relaxed">

@@ -23,7 +23,7 @@ export default function Store({
           </p>
           <h2
             id="store-title"
-            className="mt-2 font-heading text-3xl sm:text-5xl tracking-tight"
+            className="mt-2 font-sans text-3xl sm:text-5xl tracking-tight"
           >
             {ui.store.title[lang]}
           </h2>

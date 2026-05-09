@@ -40,6 +40,7 @@ export default function Contact({
     const payload = {
       name: String(fd.get("name") || ""),
       email: String(fd.get("email") || ""),
+      phone: String(fd.get("phone") || ""),
       subject: String(fd.get("subject") || ""),
       message: String(fd.get("message") || ""),
       website: String(fd.get("website") || ""),
@@ -77,7 +78,7 @@ export default function Contact({
           </p>
           <h2
             id="contact-title"
-            className="mt-2 font-heading text-3xl sm:text-5xl tracking-tight"
+            className="mt-2 font-sans text-3xl sm:text-5xl tracking-tight"
           >
             {ui.contact.title[lang]}
           </h2>
@@ -103,6 +104,12 @@ export default function Contact({
             />
           </div>
           <Field
+            label={ui.contact.fields.phone[lang]}
+            name="phone"
+            type="tel"
+            autoComplete="tel"
+          />
+          <Field
             label={ui.contact.fields.subject[lang]}
             name="subject"
             type="text"
@@ -110,7 +117,7 @@ export default function Contact({
             inputRef={subjectRef}
           />
           <label className="block">
-            <span className="font-heading tracking-widest uppercase text-sm">
+            <span className="font-sans tracking-widest uppercase text-sm">
               {ui.contact.fields.message[lang]}
             </span>
             <textarea
@@ -174,7 +181,7 @@ function Field({
 }) {
   return (
     <label className="block">
-      <span className="font-heading tracking-widest uppercase text-sm">
+      <span className="font-sans tracking-widest uppercase text-sm">
         {label}
       </span>
       <input

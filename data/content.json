@@ -12,185 +12,233 @@
       "en": "Book a workshop",
       "fr": "Réserver un atelier"
     },
-    "backgroundImage": "https://picsum.photos/seed/graffiti-hero/1920/1080"
+    "backgroundImage": "https://res.cloudinary.com/dawt0askh/image/upload/v1778289870/graffiti101/pmacq3b30yvfpr8ttcso.jpg"
   },
   "about": {
     "mission": {
       "en": "We aim to share the gift of Graffiti-based art mediums and creative expression with the next generation, through safe, educational and engaging workshops.",
-      "fr": "Démystifier le graffiti en tant que forme d'art et discipline. Nous enseignons dans le respect de la culture, avec un accent sur la technique et une approche sans jugement pour les débutants."
+      "fr": ""
     },
     "vision": {
-      "en": "A Montreal where street art is understood, valued, and accessible — where anyone curious enough to try can pick up a can and make their first mark.",
-      "fr": "Un Montréal où l'art urbain est compris, valorisé et accessible — où quiconque a la curiosité d'essayer peut prendre une canette et faire sa première marque."
+      "en": "To promote an inclusive, accessible, and judgment-free environment for artists of all ages and skill levels to explore.",
+      "fr": ""
     },
     "team": [
       {
         "id": "founder",
-        "name": "Dante",
+        "name": "danté",
         "role": {
           "en": "Founder & Lead Instructor",
           "fr": "Fondateur et instructeur principal"
         },
         "bio": {
-          "en": "Twenty years on the wall. Started teaching workshops to share the craft he wishes someone had taught him starting out.",
-          "fr": "Vingt ans sur le mur. A commencé à donner des ateliers pour partager le savoir-faire qu'il aurait aimé qu'on lui transmette à ses débuts."
+          "en": "Danté is a multidisciplinary artist whose work explores graffiti, abstract art, and unconventional techniques. Working with non-traditional surfaces, his practice is rooted in self-expression, experimentation, and spontaneity.\nThrough both his artwork and workshops, Danté aims to encourage creativity, curiosity, and authentic self-expression in ways that feel engaging, approachable, and accessible to artists of all levels.",
+          "fr": ""
         },
         "photo": "https://res.cloudinary.com/dawt0askh/image/upload/v1778282198/graffiti101/jt5ddxevk3hogeg5rq8l.jpg"
       }
     ],
-    "pastProjects": [
-      {
-        "id": "mile-end-mural",
-        "title": {
-          "en": "Mile-End Mural",
-          "fr": "Murale du Mile-End"
-        },
-        "description": {
-          "en": "A 40-foot collaborative wall on Saint-Laurent in summer 2024.",
-          "fr": "Un mur collaboratif de 40 pieds sur Saint-Laurent à l'été 2024."
-        },
-        "image": "https://picsum.photos/seed/g101-proj-1/800/600"
-      },
-      {
-        "id": "ubisoft-workshop",
-        "title": {
-          "en": "Corporate Workshop · Ubisoft",
-          "fr": "Atelier corporatif · Ubisoft"
-        },
-        "description": {
-          "en": "A team-building day for 25 employees at the Mile-End studio.",
-          "fr": "Une journée de consolidation d'équipe pour 25 employés au studio du Mile-End."
-        },
-        "image": "https://picsum.photos/seed/g101-proj-2/800/600"
-      },
-      {
-        "id": "youth-program",
-        "title": {
-          "en": "Plateau Youth Program",
-          "fr": "Programme jeunesse du Plateau"
-        },
-        "description": {
-          "en": "Six-week beginner program at a local community centre for ages 14–18.",
-          "fr": "Programme débutant de six semaines dans un centre communautaire local pour les 14–18 ans."
-        },
-        "image": "https://picsum.photos/seed/g101-proj-3/800/600"
-      }
-    ]
+    "pastProjects": []
   },
-  "services": [
-    {
-      "id": "beginner-workshop",
-      "name": {
-        "en": "Beginner Workshop",
-        "fr": "Atelier débutant"
-      },
-      "description": {
-        "en": "A 3-hour group session for first-timers. Covers safety, can control, and letterform fundamentals — and finishes with each participant putting up their first piece on a practice wall.",
-        "fr": "Une session de groupe de 3 heures pour les débutants. Couvre la sécurité, le contrôle de la canette et les bases de la typographie — et se termine par la réalisation d'une première pièce sur un mur d'entraînement."
-      },
-      "price": "$85 / person",
-      "image": "https://picsum.photos/seed/g101-svc-1/800/600"
-    },
-    {
-      "id": "private-session",
-      "name": {
-        "en": "Private Session",
-        "fr": "Session privée"
-      },
-      "description": {
-        "en": "1-on-1 instruction tailored to your goals — whether you're a hobbyist, prepping for a commission, or pushing your own style further.",
-        "fr": "Cours individuel adapté à vos objectifs — que vous soyez amateur, en préparation d'une commande ou en train de pousser votre propre style."
-      },
-      "price": "$150 / hour",
-      "image": "https://picsum.photos/seed/g101-svc-2/800/600"
-    },
-    {
-      "id": "group-event",
-      "name": {
-        "en": "Group Event",
-        "fr": "Événement de groupe"
-      },
-      "description": {
-        "en": "Birthdays, bachelor parties, corporate offsites. Customized for your group size, skill level, and venue. We handle materials and clean-up.",
-        "fr": "Anniversaires, enterrements de vie de garçon, sorties d'entreprise. Adapté à la taille de votre groupe, au niveau et au lieu. Nous fournissons le matériel et nous occupons du nettoyage."
-      },
-      "price": "Starting at $400",
-      "image": "https://picsum.photos/seed/g101-svc-3/800/600"
-    }
-  ],
-  "store": [
-    {
-      "id": "spray-cap-kit",
-      "name": {
-        "en": "Beginner Spray Cap Kit",
-        "fr": "Kit de capuchons débutant"
-      },
-      "description": {
-        "en": "A curated assortment of 10 caps covering a range of widths — everything you need to start exploring different lines and fills.",
-        "fr": "Un assortiment de 10 capuchons couvrant différentes largeurs — tout ce qu'il faut pour commencer à explorer différents traits et remplissages."
-      },
-      "price": "$35",
-      "image": "https://picsum.photos/seed/g101-store-1/600/600"
-    },
-    {
-      "id": "original-print",
-      "name": {
-        "en": "Original Print",
-        "fr": "Estampe originale"
-      },
-      "description": {
-        "en": "Limited-run prints of past Graffiti 101 pieces. Signed and numbered, printed on heavyweight matte stock.",
-        "fr": "Estampes en série limitée de pièces passées de Graffiti 101. Signées et numérotées, imprimées sur papier mat épais."
-      },
-      "price": "$60",
-      "image": "https://picsum.photos/seed/g101-store-2/600/600"
-    },
-    {
-      "id": "branded-tee",
-      "name": {
-        "en": "Branded T-Shirt",
-        "fr": "T-shirt logo"
-      },
-      "description": {
-        "en": "Heavyweight cotton tee with the Graffiti 101 throw-up across the chest. Available in S–XXL.",
-        "fr": "T-shirt en coton épais avec le throw-up Graffiti 101 sur la poitrine. Tailles S à TTG."
-      },
-      "price": "$30",
-      "image": "https://picsum.photos/seed/g101-store-3/600/600"
-    }
-  ],
-  "testimonials": [
-    {
-      "id": "first-review",
-      "quote": {
-        "en": "Honestly the most fun I've had in a workshop in years. Walked in scared of the can, walked out with my first piece on a wall.",
-        "fr": "Honnêtement l'atelier le plus amusant que j'ai fait depuis des années. Je suis arrivé intimidé par la canette, je suis reparti avec ma première pièce sur un mur."
-      },
-      "author": "Sam L.",
-      "role": {
-        "en": "Beginner Workshop · 2024",
-        "fr": "Atelier débutant · 2024"
-      }
-    }
-  ],
+  "services": [],
+  "store": [],
+  "testimonials": [],
   "contact": {
     "intro": {
-      "en": "Booking a workshop, asking about a private session, or buying something from the store? Send a message — we read every one.",
+      "en": "Feel free to contact us for all inquiries, and we will get back to you as soon as possible!",
       "fr": "Réservation d'un atelier, question sur une session privée ou achat d'un article de la boutique? Envoyez-nous un message — nous lisons chacun d'eux."
     },
     "recipientEmail": "dantecaloia@yahoo.ca"
   },
   "socials": [
     {
-      "platform": "instagram",
-      "url": "https://instagram.com"
+      "platform": "Instagram",
+      "url": "https://www.instagram.com/_graf_101_/"
     }
   ],
   "upcomingWorkshops": [],
+  "faq": [
+    {
+      "id": "what-to-bring",
+      "question": {
+        "en": "What should I bring to a workshop?",
+        "fr": "Que dois-je apporter à un atelier?"
+      },
+      "answer": {
+        "en": "Just yourself and clothes you don't mind getting paint on. We provide all spray cans, caps, gloves, masks, and surfaces to paint on.",
+        "fr": "Apportez-vous et des vêtements que vous ne craignez pas de tacher. Nous fournissons toutes les canettes, capuchons, gants, masques et surfaces sur lesquelles peindre."
+      }
+    },
+    {
+      "id": "no-experience",
+      "question": {
+        "en": "Do I need any experience?",
+        "fr": "Faut-il de l'expérience?"
+      },
+      "answer": {
+        "en": "No. Our beginner workshops are designed for total first-timers. We start with safety, can control, and the basics of letterforms — by the end of the session you'll have your first piece on a wall.",
+        "fr": "Non. Nos ateliers débutants sont conçus pour les vraies premières fois. Nous commençons par la sécurité, le contrôle de la canette et les bases des lettrages — à la fin de la séance vous aurez votre première pièce sur un mur."
+      }
+    },
+    {
+      "id": "is-graffiti-legal",
+      "question": {
+        "en": "Is graffiti legal in Montreal?",
+        "fr": "Le graffiti est-il légal à Montréal?"
+      },
+      "answer": {
+        "en": "Painting on a surface without the owner's permission is illegal. Every Graffiti 101 workshop takes place on legal walls or on practice surfaces inside our studio — you'll only ever paint where it's welcome.",
+        "fr": "Peindre sur une surface sans la permission du propriétaire est illégal. Chaque atelier Graffiti 101 se déroule sur des murs légaux ou sur des surfaces d'entraînement dans notre studio — vous ne peindrez que là où c'est permis."
+      }
+    },
+    {
+      "id": "minimum-age",
+      "question": {
+        "en": "Is there a minimum age?",
+        "fr": "Y a-t-il un âge minimum?"
+      },
+      "answer": {
+        "en": "Workshops are open to anyone 14+. Younger participants (12–13) are welcome with a parent or guardian present. For school or community groups with younger children, contact us about a tailored session.",
+        "fr": "Les ateliers sont ouverts à toute personne de 14 ans et plus. Les participants plus jeunes (12–13 ans) sont les bienvenus avec un parent ou tuteur présent. Pour les groupes scolaires ou communautaires avec des enfants plus jeunes, contactez-nous pour une séance adaptée."
+      }
+    },
+    {
+      "id": "group-size",
+      "question": {
+        "en": "How many people can a private group session take?",
+        "fr": "Combien de personnes peut accueillir une session privée?"
+      },
+      "answer": {
+        "en": "Private group events run from 4 to 30 people. We've hosted everything from intimate birthdays to corporate offsites with multiple teams rotating through stations. Tell us your group size when you reach out and we'll scope a session that fits.",
+        "fr": "Les événements privés accueillent de 4 à 30 personnes. Nous avons organisé aussi bien des anniversaires intimes que des sorties d'entreprise avec plusieurs équipes en rotation. Indiquez-nous la taille du groupe et nous concevrons une séance adaptée."
+      }
+    },
+    {
+      "id": "duration",
+      "question": {
+        "en": "How long is a workshop?",
+        "fr": "Combien de temps dure un atelier?"
+      },
+      "answer": {
+        "en": "The standard beginner workshop runs 3 hours. Private sessions are typically 1–2 hours. Group events can range from 2 to 4 hours depending on size and goals.",
+        "fr": "L'atelier débutant standard dure 3 heures. Les sessions privées durent généralement 1 à 2 heures. Les événements de groupe peuvent durer de 2 à 4 heures selon la taille et les objectifs."
+      }
+    },
+    {
+      "id": "language",
+      "question": {
+        "en": "Are workshops offered in French?",
+        "fr": "Les ateliers sont-ils offerts en français?"
+      },
+      "answer": {
+        "en": "Yes. Our instructors are fully bilingual and we run sessions in French, English, or both at the same time depending on the group.",
+        "fr": "Oui. Nos instructeurs sont parfaitement bilingues et nous animons les séances en français, en anglais ou dans les deux langues simultanément selon le groupe."
+      }
+    }
+  ],
+  "business": {
+    "legalName": "Graffiti 101",
+    "streetAddress": "",
+    "addressLocality": "Montreal",
+    "addressRegion": "QC",
+    "postalCode": "",
+    "addressCountry": "CA",
+    "telephone": "",
+    "geo": { "lat": 45.5231, "lng": -73.5817 },
+    "openingHours": [
+      "Mo-Fr 10:00-18:00",
+      "Sa 11:00-17:00"
+    ],
+    "priceRange": "$$"
+  },
+  "organizations": {
+    "intro": {
+      "en": "Graffiti 101 is a structured, bilingual creative-arts program designed for schools, community centres, and youth organizations. We turn Montreal's signature visual culture into hands-on educational programming — safe, inclusive, and grant-fundable.",
+      "fr": "Graffiti 101 est un programme d'arts créatifs structuré et bilingue, conçu pour les écoles, les maisons de jeunes et les organismes communautaires. Nous transformons la culture visuelle emblématique de Montréal en programmation éducative concrète — sécuritaire, inclusive et admissible aux subventions."
+    },
+    "outcomes": [
+      {
+        "id": "outcome-confidence",
+        "text": {
+          "en": "Builds confidence and creative self-expression",
+          "fr": "Renforce la confiance en soi et l'expression créative"
+        }
+      },
+      {
+        "id": "outcome-skills",
+        "text": {
+          "en": "Develops fine motor skills and visual literacy",
+          "fr": "Développe la motricité fine et la littératie visuelle"
+        }
+      },
+      {
+        "id": "outcome-identity",
+        "text": {
+          "en": "Connects youth to Montreal's cultural identity",
+          "fr": "Relie les jeunes à l'identité culturelle de Montréal"
+        }
+      },
+      {
+        "id": "outcome-channeling",
+        "text": {
+          "en": "Channels artistic energy into legitimate creative practice",
+          "fr": "Canalise l'énergie artistique vers une pratique créative légitime"
+        }
+      },
+      {
+        "id": "outcome-inclusive",
+        "text": {
+          "en": "Inclusive of all skill levels; designed for ages 14+",
+          "fr": "Accessible à tous les niveaux; conçu pour les 14 ans et plus"
+        }
+      }
+    ],
+    "practicalItems": [
+      {
+        "id": "practical-safety",
+        "text": {
+          "en": "Safety first — water-based aerosols where possible, ventilated practice walls, full PPE provided",
+          "fr": "Sécurité d'abord — aérosols à l'eau lorsque possible, murs d'entraînement ventilés, équipement de protection fourni"
+        }
+      },
+      {
+        "id": "practical-materials",
+        "text": {
+          "en": "Materials and cleanup are fully included — your venue does nothing",
+          "fr": "Le matériel et le nettoyage sont entièrement inclus — votre lieu n'a rien à fournir"
+        }
+      },
+      {
+        "id": "practical-bilingual",
+        "text": {
+          "en": "Full bilingual delivery — sessions run in English or French",
+          "fr": "Prestation entièrement bilingue — sessions en anglais ou en français"
+        }
+      },
+      {
+        "id": "practical-groups",
+        "text": {
+          "en": "Group sizes 8 to 30; custom programming available for larger groups",
+          "fr": "Groupes de 8 à 30 personnes; programmation sur mesure pour les groupes plus grands"
+        }
+      },
+      {
+        "id": "practical-location",
+        "text": {
+          "en": "Workshops run at your site or our Mile-End studio",
+          "fr": "Les ateliers se déroulent chez vous ou à notre studio du Mile-End"
+        }
+      }
+    ],
+    "pdfUrl": {
+      "en": "",
+      "fr": ""
+    }
+  },
   "footer": {
     "tagline": {
-      "en": "Teaching the craft. Respecting the culture.",
-      "fr": "Enseigner la technique. Respecter la culture."
+      "en": "Experimentation and creation, one piece at a time.",
+      "fr": ""
     }
   }
 }

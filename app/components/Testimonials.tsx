@@ -22,7 +22,7 @@ export default function Testimonials({
           </p>
           <h2
             id="testimonials-title"
-            className="mt-2 font-heading text-3xl sm:text-5xl tracking-tight"
+            className="mt-2 font-sans text-3xl sm:text-5xl tracking-tight"
           >
             {ui.testimonials.title[lang]}
           </h2>
@@ -47,17 +47,17 @@ export default function Testimonials({
                 />
                 <blockquote className="flex-1">
                   <p className="text-lg leading-relaxed">
-                    <span aria-hidden className="text-brand-red font-heading text-2xl mr-1">
+                    <span aria-hidden className="text-brand-red font-sans text-2xl mr-1">
                       &ldquo;
                     </span>
                     {t.quote[lang]}
-                    <span aria-hidden className="text-brand-red font-heading text-2xl ml-1">
+                    <span aria-hidden className="text-brand-red font-sans text-2xl ml-1">
                       &rdquo;
                     </span>
                   </p>
                 </blockquote>
                 <footer className="mt-4 border-t border-brand-black/10 pt-3">
-                  <p className="font-heading text-lg tracking-wide">
+                  <p className="font-sans text-lg tracking-wide">
                     {t.author}
                   </p>
                   {t.role && (

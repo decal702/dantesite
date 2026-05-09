@@ -45,9 +45,9 @@ export default function StoreCard({
         />
       </div>
       <div className="p-5 flex flex-col flex-1">
-        <p className="font-heading text-xl tracking-wide">{name}</p>
+        <p className="font-sans text-xl tracking-wide">{name}</p>
         <p className="mt-2 text-base leading-relaxed flex-1">{description}</p>
-        <p className="mt-3 font-heading text-lg text-brand-red">{price}</p>
+        <p className="mt-3 font-sans text-lg text-brand-red">{price}</p>
         <button
           type="button"
           onClick={handleInquire}

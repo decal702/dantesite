@@ -23,7 +23,7 @@ export default function Services({
           </p>
           <h2
             id="services-title"
-            className="mt-2 font-heading text-3xl sm:text-5xl tracking-tight"
+            className="mt-2 font-sans text-3xl sm:text-5xl tracking-tight"
           >
             {ui.services.title[lang]}
           </h2>
@@ -44,7 +44,7 @@ export default function Services({
                 }`}
               >
                 {s.comingSoon && (
-                  <span className="absolute top-3 right-3 z-10 bg-brand-red text-brand-yellow font-heading text-xs uppercase tracking-widest px-3 py-1">
+                  <span className="absolute top-3 right-3 z-10 bg-brand-red text-brand-yellow font-sans text-xs uppercase tracking-widest px-3 py-1">
                     {ui.services.comingSoon[lang]}
                   </span>
                 )}
@@ -59,7 +59,7 @@ export default function Services({
                   />
                 </div>
                 <div className="p-6 flex flex-col">
-                  <p className="font-heading text-2xl tracking-wide">
+                  <p className="font-sans text-2xl tracking-wide">
                     {s.name[lang]}
                   </p>
                   <p className="mt-3 text-base leading-relaxed">
