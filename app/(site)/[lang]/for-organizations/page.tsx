@@ -67,7 +67,7 @@ export default async function ForOrganizationsPage({
 
   return (
     <>
-      <Nav lang={lang} />
+      <Nav lang={lang} labels={content.labels.nav} />
       <main className="flex-1">
         <section className="bg-brand-cream text-brand-black py-20 sm:py-28">
           <div className="max-w-5xl mx-auto px-4 sm:px-6">

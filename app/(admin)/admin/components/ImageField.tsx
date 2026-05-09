@@ -6,10 +6,12 @@ export default function ImageField({
   label,
   value,
   onChange,
+  hint,
 }: {
   label: string;
   value: string;
   onChange: (url: string) => void;
+  hint?: string;
 }) {
   const [uploading, setUploading] = useState(false);
   const [error, setError] = useState("");
@@ -37,7 +39,12 @@ export default function ImageField({
   return (
     <div>
       <p className="font-heading tracking-widest uppercase text-sm">{label}</p>
-      <div className="mt-1 flex items-start gap-3 flex-wrap">
+      {hint && (
+        <p className="mt-1 text-xs text-brand-black/60">
+          Recommended: {hint}
+        </p>
+      )}
+      <div className="mt-2 flex items-start gap-3 flex-wrap">
         {value ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img

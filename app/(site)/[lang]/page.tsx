@@ -96,7 +96,7 @@ export default async function Home({
   return (
     <>
       <StructuredData content={content} lang={lang} page="home" />
-      <Nav lang={lang} />
+      <Nav lang={lang} labels={content.labels.nav} />
       <main className="flex-1">
         <Hero data={content.hero} lang={lang} />
         <About

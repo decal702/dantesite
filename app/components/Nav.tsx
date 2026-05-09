@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import type { Lang } from "@/lib/content";
+import type { Content, Lang } from "@/lib/content";
 import { ui } from "@/lib/i18n";
 
 type AnchorItem = { kind: "anchor"; id: string; labelKey: keyof typeof ui.nav };
@@ -22,7 +22,16 @@ const ITEMS: Item[] = [
 
 const ANCHOR_IDS = ITEMS.flatMap((i) => (i.kind === "anchor" ? [i.id] : []));
 
-export default function Nav({ lang }: { lang: Lang }) {
+export default function Nav({
+  lang,
+  labels,
+}: {
+  lang: Lang;
+  labels?: Content["labels"]["nav"];
+}) {
+  function navLabel(key: keyof typeof ui.nav): string {
+    return labels?.[key]?.[lang] ?? ui.nav[key][lang];
+  }
   const pathname = usePathname();
   const [activeAnchor, setActiveAnchor] = useState<string>("home");
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -100,7 +109,7 @@ export default function Nav({ lang }: { lang: Lang }) {
                       : "text-brand-yellow/70 hover:text-brand-yellow"
                   }`}
                 >
-                  {ui.nav[item.labelKey][lang]}
+                  {navLabel(item.labelKey)}
                   <span
                     className={`block h-0.5 mt-0.5 transition-all ${
                       active ? "bg-brand-black" : "bg-transparent"
@@ -199,7 +208,7 @@ export default function Nav({ lang }: { lang: Lang }) {
                       active ? "text-brand-black" : "text-brand-yellow"
                     }`}
                   >
-                    {ui.nav[item.labelKey][lang]}
+                    {navLabel(item.labelKey)}
                   </Link>
                 </li>
               );

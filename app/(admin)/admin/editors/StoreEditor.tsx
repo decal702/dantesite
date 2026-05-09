@@ -84,6 +84,7 @@ export default function StoreEditor({
             </label>
             <ImageField
               label="Image"
+              hint="800 × 800px (1:1 square)"
               value={item.image}
               onChange={(image) => patch(item.id, { image })}
             />

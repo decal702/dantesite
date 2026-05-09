@@ -63,7 +63,7 @@ export default async function StorePage({
   return (
     <>
       <StructuredData content={content} lang={lang} page="store" />
-      <Nav lang={lang} />
+      <Nav lang={lang} labels={content.labels.nav} />
       <main className="flex-1">
         <Store
           data={content.store}

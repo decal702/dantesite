@@ -6,22 +6,22 @@
     },
     "tagline": {
       "en": "GRAFFITI 101 is an Arts workshop project founded by Montreal-based multidisciplinary artist danté.",
-      "fr": ""
+      "fr": "GRAFFITI 101 est un projet d'ateliers artistiques fondé par danté, artiste multidisciplinaire basé à Montréal."
     },
     "ctaLabel": {
       "en": "Contact Us",
-      "fr": ""
+      "fr": "Contactez-nous"
     },
     "backgroundImage": "https://res.cloudinary.com/dawt0askh/image/upload/v1778289870/graffiti101/pmacq3b30yvfpr8ttcso.jpg"
   },
   "about": {
     "mission": {
       "en": "We aim to share the gift of Graffiti-based art mediums and creative expression with the next generation, through safe, educational and engaging workshops.",
-      "fr": ""
+      "fr": "Nous souhaitons partager les arts du graffiti et l'expression créative avec la prochaine génération, à travers des ateliers sécuritaires, éducatifs et stimulants."
     },
     "vision": {
       "en": "To promote an inclusive, accessible, and judgment-free environment for artists of all ages and skill levels to explore.",
-      "fr": ""
+      "fr": "Promouvoir un environnement inclusif, accessible et sans jugement où les artistes de tous âges et de tous niveaux peuvent explorer."
     },
     "team": [
       {
@@ -33,7 +33,7 @@
         },
         "bio": {
           "en": "Danté is a multidisciplinary artist whose work explores graffiti, abstract art, and unconventional techniques. Working with non-traditional surfaces, his practice is rooted in self-expression, experimentation, and spontaneity.\nThrough both his artwork and workshops, Danté aims to encourage creativity, curiosity, and authentic self-expression in ways that feel engaging, approachable, and accessible to artists of all levels.",
-          "fr": ""
+          "fr": "Danté est un artiste multidisciplinaire dont le travail explore le graffiti, l'art abstrait et les techniques non conventionnelles. Travaillant sur des surfaces non traditionnelles, sa pratique est ancrée dans l'expression personnelle, l'expérimentation et la spontanéité.\nÀ travers ses œuvres comme ses ateliers, Danté cherche à encourager la créativité, la curiosité et l'expression authentique de soi, de manière engageante, abordable et accessible aux artistes de tous niveaux."
         },
         "photo": "https://res.cloudinary.com/dawt0askh/image/upload/v1778282198/graffiti101/jt5ddxevk3hogeg5rq8l.jpg"
       }
@@ -46,7 +46,7 @@
   "contact": {
     "intro": {
       "en": "Feel free to contact us for all inquiries, and we will get back to you as soon as possible!",
-      "fr": ""
+      "fr": "N'hésitez pas à nous écrire pour toute demande, et nous vous répondrons dans les plus brefs délais!"
     },
     "recipientEmail": "dantecaloia@yahoo.ca"
   },
@@ -98,6 +98,14 @@
       "title": {
         "en": "Who we are",
         "fr": "Qui sommes-nous"
+      },
+      "missionHeading": {
+        "en": "Our mission",
+        "fr": "Notre mission"
+      },
+      "visionHeading": {
+        "en": "Our vision",
+        "fr": "Notre vision"
       }
     },
     "services": {
@@ -173,12 +181,21 @@
         "en": "Workshops for schools & youth groups",
         "fr": "Ateliers pour les écoles et les groupes de jeunes"
       }
+    },
+    "nav": {
+      "home": { "en": "Home", "fr": "Accueil" },
+      "about": { "en": "About", "fr": "À propos" },
+      "services": { "en": "Services", "fr": "Services" },
+      "store": { "en": "Store", "fr": "Boutique" },
+      "faq": { "en": "FAQ", "fr": "FAQ" },
+      "forOrganizations": { "en": "For organizations", "fr": "Pour les organismes" },
+      "contact": { "en": "Contact", "fr": "Contact" }
     }
   },
   "footer": {
     "tagline": {
       "en": "Experimentation and creation, one piece at a time.",
-      "fr": ""
+      "fr": "Expérimentation et création, une pièce à la fois."
     }
   }
 }

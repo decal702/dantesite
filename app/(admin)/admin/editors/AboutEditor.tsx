@@ -131,6 +131,7 @@ export default function AboutEditor({
               />
               <ImageField
                 label="Photo"
+                hint="800 × 800px (1:1 square) — cropped to a circle-friendly portrait"
                 value={m.photo}
                 onChange={(photo) => patchMember(m.id, { photo })}
               />
@@ -167,6 +168,7 @@ export default function AboutEditor({
               />
               <ImageField
                 label="Image"
+                hint="800 × 600px (4:3 landscape)"
                 value={p.image}
                 onChange={(image) => patchProject(p.id, { image })}
               />

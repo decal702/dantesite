@@ -97,6 +97,18 @@ export type SectionLabelKey =
   | "contact"
   | "organizations";
 
+export type NavLabels = {
+  home?: Bilingual;
+  about?: Bilingual;
+  services?: Bilingual;
+  schedule?: Bilingual;
+  store?: Bilingual;
+  testimonials?: Bilingual;
+  faq?: Bilingual;
+  contact?: Bilingual;
+  forOrganizations?: Bilingual;
+};
+
 export type Labels = {
   about: AboutLabels;
   services: SectionLabels;
@@ -106,6 +118,7 @@ export type Labels = {
   socials: SectionLabels;
   contact: SectionLabels;
   organizations: SectionLabels;
+  nav: NavLabels;
 };
 
 export type BusinessInfo = {

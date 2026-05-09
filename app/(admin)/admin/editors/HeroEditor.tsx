@@ -45,6 +45,7 @@ export default function HeroEditor({
       />
       <ImageField
         label="Background image"
+        hint="1920 × 1080px (16:9 landscape) — full-bleed behind the hero text"
         value={data.backgroundImage}
         onChange={(backgroundImage) => onChange({ ...data, backgroundImage })}
       />

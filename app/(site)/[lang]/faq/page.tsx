@@ -64,7 +64,7 @@ export default async function FaqPage({
   return (
     <>
       <StructuredData content={content} lang={lang} page="faq" />
-      <Nav lang={lang} />
+      <Nav lang={lang} labels={content.labels.nav} />
       <main className="flex-1">
         <Faq
           data={content.faq}

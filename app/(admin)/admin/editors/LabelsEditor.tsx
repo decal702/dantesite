@@ -3,6 +3,7 @@
 import type {
   Bilingual,
   Labels,
+  NavLabels,
   SectionLabelKey,
 } from "@/lib/content";
 import BilingualField from "../components/BilingualField";
@@ -17,6 +18,18 @@ type LabelKey =
   | "teamHeading"
   | "projectsHeading"
   | "empty";
+
+type NavFieldKey = keyof NavLabels;
+
+const NAV_FIELDS: Array<{ key: NavFieldKey; label: string }> = [
+  { key: "home", label: "Home link" },
+  { key: "about", label: "About link" },
+  { key: "services", label: "Services link" },
+  { key: "store", label: "Store link" },
+  { key: "faq", label: "FAQ link" },
+  { key: "forOrganizations", label: "For organizations link" },
+  { key: "contact", label: "Contact link" },
+];
 
 const SECTION_DESCRIPTORS: Array<{
   key: SectionLabelKey;
@@ -99,6 +112,11 @@ export default function LabelsEditor({
     onChange({ ...data, [sectionKey]: next } as Labels);
   }
 
+  function patchNavField(field: NavFieldKey, value: Bilingual) {
+    const nav: NavLabels = { ...(data.nav ?? {}), [field]: value };
+    onChange({ ...data, nav });
+  }
+
   return (
     <SectionPanel
       title="Section labels"
@@ -136,6 +154,24 @@ export default function LabelsEditor({
             })}
           </div>
         ))}
+
+        <div className="grid gap-3 border-l-2 border-brand-black/10 pl-5">
+          <h3 className="font-heading text-lg uppercase tracking-widest">
+            Navigation menu
+          </h3>
+          <p className="text-sm text-brand-black/60 -mt-1">
+            Top-bar tab labels. Leave blank to fall back to the built-in
+            defaults.
+          </p>
+          {NAV_FIELDS.map(({ key, label }) => (
+            <BilingualField
+              key={key}
+              label={label}
+              value={data.nav?.[key] ?? EMPTY_BILINGUAL}
+              onChange={(value) => patchNavField(key, value)}
+            />
+          ))}
+        </div>
       </div>
     </SectionPanel>
   );

@@ -84,6 +84,7 @@ export default function ServicesEditor({
             </label>
             <ImageField
               label="Image"
+              hint="800 × 600px (4:3 landscape)"
               value={item.image}
               onChange={(image) => patch(item.id, { image })}
             />
