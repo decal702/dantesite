@@ -6,6 +6,7 @@ import type { Content } from "@/lib/content";
 import HeroEditor from "./editors/HeroEditor";
 import AboutEditor from "./editors/AboutEditor";
 import ServicesEditor from "./editors/ServicesEditor";
+import UpcomingWorkshopsEditor from "./editors/UpcomingWorkshopsEditor";
 import StoreEditor from "./editors/StoreEditor";
 import TestimonialsEditor from "./editors/TestimonialsEditor";
 import ContactEditor from "./editors/ContactEditor";
@@ -137,6 +138,16 @@ export default function AdminDashboard({
           onChange={(services) => update("services", services)}
           onSave={() => saveSection("services", content)}
           saving={savingSection === "services"}
+          disabled={savingSection !== null}
+        />
+        <UpcomingWorkshopsEditor
+          data={content.upcomingWorkshops}
+          services={content.services}
+          onChange={(upcomingWorkshops) =>
+            update("upcomingWorkshops", upcomingWorkshops)
+          }
+          onSave={() => saveSection("upcomingWorkshops", content)}
+          saving={savingSection === "upcomingWorkshops"}
           disabled={savingSection !== null}
         />
         <StoreEditor

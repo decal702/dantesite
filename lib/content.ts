@@ -25,6 +25,7 @@ export type ServiceItem = {
   description: Bilingual;
   price: string;
   image: string;
+  comingSoon?: boolean;
 };
 
 export type StoreItem = {
@@ -45,6 +46,15 @@ export type Testimonial = {
 export type SocialLink = {
   platform: string;
   url: string;
+};
+
+export type UpcomingWorkshop = {
+  id: string;
+  serviceId: string;
+  date: string;
+  time?: string;
+  location: Bilingual;
+  note?: Bilingual;
 };
 
 export type Content = {
@@ -68,6 +78,7 @@ export type Content = {
     recipientEmail: string;
   };
   socials: SocialLink[];
+  upcomingWorkshops: UpcomingWorkshop[];
   footer: {
     tagline: Bilingual;
   };

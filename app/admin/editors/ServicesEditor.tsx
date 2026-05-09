@@ -87,6 +87,22 @@ export default function ServicesEditor({
               value={item.image}
               onChange={(image) => patch(item.id, { image })}
             />
+            <label className="flex items-center gap-2 mt-1">
+              <input
+                type="checkbox"
+                checked={item.comingSoon ?? false}
+                onChange={(e) =>
+                  patch(item.id, { comingSoon: e.target.checked })
+                }
+                className="h-4 w-4 accent-brand-red"
+              />
+              <span className="font-heading tracking-widest uppercase text-sm">
+                Coming soon
+              </span>
+              <span className="text-xs text-brand-black/60 normal-case tracking-normal ml-1">
+                — shows a &ldquo;Coming soon&rdquo; badge on the public site and dims the card
+              </span>
+            </label>
           </div>
         )}
       />

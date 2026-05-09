@@ -22,11 +22,27 @@ export default function SafeImage({
     return (
       <div
         aria-hidden
-        className={`bg-brand-black/10 flex items-center justify-center text-xs uppercase tracking-widest text-brand-black/40 ${
+        className={`flex flex-col items-center justify-center gap-2 text-brand-black/40 ${
           placeholderClassName ?? className ?? ""
         }`}
       >
-        {placeholderLabel}
+        <svg
+          width="28"
+          height="28"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.25"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <rect x="3" y="3" width="18" height="18" rx="1" />
+          <circle cx="8.5" cy="8.5" r="1.5" fill="currentColor" />
+          <path d="M21 15.5l-4.5-4.5L6 21" />
+        </svg>
+        <span className="font-heading text-[10px] uppercase tracking-widest">
+          {placeholderLabel}
+        </span>
       </div>
     );
   }

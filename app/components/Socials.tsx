@@ -1,5 +1,6 @@
 import type { Content, Lang } from "@/lib/content";
 import { ui } from "@/lib/i18n";
+import Reveal from "./Reveal";
 
 export default function Socials({
   data,
@@ -16,17 +17,18 @@ export default function Socials({
       aria-labelledby="socials-title"
       className="py-16 sm:py-20"
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+      <Reveal className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
         <p className="font-heading text-brand-red tracking-widest uppercase text-sm">
           {ui.socials.eyebrow[lang]}
         </p>
         <h2
           id="socials-title"
-          className="mt-2 font-heading text-3xl sm:text-5xl tracking-tight"
+          className="mt-2 font-heading text-2xl sm:text-4xl tracking-tight"
         >
           {ui.socials.title[lang]}
         </h2>
-        <p className="mt-3 max-w-xl mx-auto text-base">
+        <div className="mt-4 h-0.5 w-12 bg-brand-red mx-auto" aria-hidden />
+        <p className="mt-6 max-w-xl mx-auto text-base">
           {ui.socials.intro[lang]}
         </p>
 
@@ -44,7 +46,7 @@ export default function Socials({
             </li>
           ))}
         </ul>
-      </div>
+      </Reveal>
     </section>
   );
 }

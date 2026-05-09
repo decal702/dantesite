@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import type { Content, Lang } from "@/lib/content";
 import { ui } from "@/lib/i18n";
+import Reveal from "./Reveal";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
@@ -70,16 +71,19 @@ export default function Contact({
       className="bg-brand-red text-brand-yellow py-20 sm:py-28"
     >
       <div className="max-w-3xl mx-auto px-4 sm:px-6">
-        <p className="font-heading text-brand-yellow tracking-widest uppercase text-sm">
-          {ui.contact.eyebrow[lang]}
-        </p>
-        <h2
-          id="contact-title"
-          className="mt-2 font-heading text-4xl sm:text-6xl tracking-tight"
-        >
-          {ui.contact.title[lang]}
-        </h2>
-        <p className="mt-4 text-lg text-brand-yellow/90">{data.intro[lang]}</p>
+        <Reveal>
+          <p className="font-heading text-brand-yellow tracking-widest uppercase text-sm">
+            {ui.contact.eyebrow[lang]}
+          </p>
+          <h2
+            id="contact-title"
+            className="mt-2 font-heading text-3xl sm:text-5xl tracking-tight"
+          >
+            {ui.contact.title[lang]}
+          </h2>
+          <div className="mt-4 h-0.5 w-12 bg-brand-yellow" aria-hidden />
+          <p className="mt-6 text-lg text-brand-yellow/90">{data.intro[lang]}</p>
+        </Reveal>
 
         <form onSubmit={handleSubmit} className="mt-10 grid gap-5" noValidate>
           <div className="grid sm:grid-cols-2 gap-5">

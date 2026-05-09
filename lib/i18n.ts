@@ -38,6 +38,7 @@ export const ui = {
       en: "From a first-timer's introduction to private coaching for working writers — pricing in Canadian dollars, materials always included.",
       fr: "De l'introduction pour débutants au coaching privé pour artistes établis — prix en dollars canadiens, matériel toujours inclus.",
     },
+    comingSoon: { en: "Coming soon", fr: "À venir" },
   },
   store: {
     eyebrow: { en: "Store", fr: "Boutique" },
