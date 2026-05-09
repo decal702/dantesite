@@ -14,7 +14,6 @@ const ITEMS: Item[] = [
   { kind: "anchor", id: "home", labelKey: "home" },
   { kind: "anchor", id: "about", labelKey: "about" },
   { kind: "anchor", id: "services", labelKey: "services" },
-  { kind: "anchor", id: "schedule", labelKey: "schedule" },
   { kind: "page", path: "store", labelKey: "store" },
   { kind: "page", path: "faq", labelKey: "faq" },
   { kind: "page", path: "for-organizations", labelKey: "forOrganizations" },

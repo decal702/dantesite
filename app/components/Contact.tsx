@@ -75,16 +75,12 @@ export default function Contact({
     >
       <div className="max-w-3xl mx-auto px-4 sm:px-6">
         <Reveal>
-          <p className="font-heading text-brand-yellow tracking-widest uppercase text-sm">
-            {labels.eyebrow?.[lang] ?? ""}
-          </p>
           <h2
             id="contact-title"
-            className="mt-2 font-sans text-3xl sm:text-5xl tracking-tight"
+            className="font-heading text-brand-yellow tracking-widest uppercase text-sm"
           >
-            {labels.title?.[lang] ?? ""}
+            {labels.eyebrow?.[lang] ?? ""}
           </h2>
-          <div className="mt-4 h-0.5 w-12 bg-brand-yellow" aria-hidden />
           <p className="mt-6 text-lg text-brand-yellow/90">{data.intro[lang]}</p>
         </Reveal>
 

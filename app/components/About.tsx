@@ -19,16 +19,12 @@ export default function About({
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <Reveal>
-          <p className="font-heading text-brand-red tracking-widest uppercase text-sm">
-            {labels.eyebrow?.[lang] ?? ""}
-          </p>
           <h2
             id="about-title"
-            className="mt-2 font-sans text-3xl sm:text-5xl tracking-tight"
+            className="font-heading text-brand-red tracking-widest uppercase text-sm"
           >
-            {labels.title?.[lang] ?? ""}
+            {labels.eyebrow?.[lang] ?? ""}
           </h2>
-          <div className="mt-4 h-0.5 w-12 bg-brand-red" aria-hidden />
         </Reveal>
 
         <Reveal delay={100} className="mt-10 grid md:grid-cols-2 gap-6">
