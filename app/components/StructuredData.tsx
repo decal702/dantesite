@@ -18,15 +18,6 @@ export default function StructuredData({
   const sameAs = content.socials.map((s) => s.url).filter(Boolean);
   const phone = business.telephone || undefined;
 
-  const address = {
-    "@type": "PostalAddress" as const,
-    streetAddress: business.streetAddress || undefined,
-    addressLocality: business.addressLocality,
-    addressRegion: business.addressRegion,
-    postalCode: business.postalCode || undefined,
-    addressCountry: business.addressCountry,
-  };
-
   // Site-wide identity — emitted on every page so search engines / LLMs
   // see consistent business info regardless of entry point.
   const organization = {
@@ -49,9 +40,9 @@ export default function StructuredData({
     publisher: { "@id": `${SITE_URL}/#organization` },
   };
 
-  const localBusiness = {
+  const businessOrg = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": "Organization",
     "@id": `${SITE_URL}/#business`,
     name: business.legalName,
     description: content.hero.tagline[lang],
@@ -59,22 +50,12 @@ export default function StructuredData({
     telephone: phone,
     email: content.contact.recipientEmail,
     image: content.hero.backgroundImage || undefined,
-    address,
-    geo: business.geo
-      ? {
-          "@type": "GeoCoordinates",
-          latitude: business.geo.lat,
-          longitude: business.geo.lng,
-        }
-      : undefined,
-    openingHours: business.openingHours,
-    priceRange: business.priceRange,
     areaServed: { "@type": "City", name: "Montreal" },
     sameAs: sameAs.length > 0 ? sameAs : undefined,
     knowsLanguage: ["en", "fr"],
   };
 
-  const all: unknown[] = [organization, website, localBusiness];
+  const all: unknown[] = [organization, website, businessOrg];
 
   if (page === "home") {
     for (const s of content.services.filter((s) => !s.comingSoon)) {
@@ -114,7 +95,12 @@ export default function StructuredData({
         location: {
           "@type": "Place",
           name: w.location[lang],
-          address,
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: business.addressLocality,
+            addressRegion: business.addressRegion,
+            addressCountry: business.addressCountry,
+          },
         },
         organizer: { "@id": `${SITE_URL}/#business` },
         image: service?.image || undefined,

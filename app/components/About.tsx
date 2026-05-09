@@ -1,5 +1,4 @@
 import type { Content, Lang } from "@/lib/content";
-import { ui } from "@/lib/i18n";
 import Reveal from "./Reveal";
 import SafeImage from "./SafeImage";
 
@@ -35,7 +34,7 @@ export default function About({
         <Reveal delay={100} className="mt-10 grid md:grid-cols-2 gap-6">
           <article className="bg-brand-black text-brand-yellow border border-brand-black/10 flex flex-col">
             <h3 className="bg-brand-yellow text-brand-black font-sans text-sm uppercase tracking-widest px-5 py-2 border-b border-brand-black">
-              {ui.about.missionHeading[lang]}
+              {labels.missionHeading?.[lang] ?? ""}
             </h3>
             <p className="p-5 sm:p-6 text-lg leading-relaxed">
               {data.mission[lang]}
@@ -43,7 +42,7 @@ export default function About({
           </article>
           <article className="bg-brand-black text-brand-yellow border border-brand-black/10 flex flex-col">
             <h3 className="bg-brand-yellow text-brand-black font-sans text-sm uppercase tracking-widest px-5 py-2 border-b border-brand-black">
-              {ui.about.visionHeading[lang]}
+              {labels.visionHeading?.[lang] ?? ""}
             </h3>
             <p className="p-5 sm:p-6 text-lg leading-relaxed">
               {data.vision[lang]}
@@ -54,7 +53,7 @@ export default function About({
         {data.team.length > 0 && (
           <Reveal delay={150} className="mt-16">
             <h3 className="font-sans text-2xl sm:text-3xl tracking-tight">
-              {ui.about.teamHeading[lang]}
+              {labels.teamHeading?.[lang] ?? ""}
             </h3>
             <ul className="mt-6 flex flex-wrap justify-center gap-6">
               {data.team.map((m) => (
@@ -92,7 +91,7 @@ export default function About({
         {data.pastProjects.length > 0 && (
           <Reveal delay={150} className="mt-16">
             <h3 className="font-sans text-2xl sm:text-3xl tracking-tight">
-              {ui.about.projectsHeading[lang]}
+              {labels.projectsHeading?.[lang] ?? ""}
             </h3>
             <ul className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {data.pastProjects.map((p) => (

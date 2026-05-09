@@ -27,12 +27,7 @@ export const ui = {
   hero: {
     secondaryCta: { en: "See what we offer", fr: "Voir nos services" },
   },
-  about: {
-    missionHeading: { en: "Mission", fr: "Mission" },
-    visionHeading: { en: "Vision", fr: "Vision" },
-    teamHeading: { en: "The team", fr: "L'équipe" },
-    projectsHeading: { en: "Past projects", fr: "Projets passés" },
-  },
+  about: {},
   services: {
     comingSoon: { en: "Coming soon", fr: "À venir" },
   },
@@ -43,12 +38,7 @@ export const ui = {
     },
     inquiryPrefix: { en: "Inquiry", fr: "Demande" },
   },
-  testimonials: {
-    empty: {
-      en: "Reviews coming soon.",
-      fr: "Avis à venir.",
-    },
-  },
+  testimonials: {},
   faq: {},
   socials: {},
   contact: {
@@ -129,7 +119,6 @@ export const ui = {
         en: "Preferred dates (optional)",
         fr: "Dates souhaitées (optionnel)",
       },
-      venue: { en: "Where would the workshop run?", fr: "Lieu de l'atelier" },
       budgetRange: {
         en: "Budget range (optional)",
         fr: "Budget approximatif (optionnel)",
@@ -138,11 +127,6 @@ export const ui = {
         en: "Anything else we should know? (optional)",
         fr: "Y a-t-il autre chose à savoir? (optionnel)",
       },
-    },
-    venueOptions: {
-      ourStudio: { en: "At your Mile-End studio", fr: "À votre studio du Mile-End" },
-      ourSite: { en: "At our site/location", fr: "Chez nous (sur place)" },
-      either: { en: "Either works", fr: "L'un ou l'autre" },
     },
     budgetOptions: {
       under500: { en: "Under $500", fr: "Moins de 500 $" },

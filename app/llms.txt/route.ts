@@ -19,7 +19,7 @@ export async function GET() {
   lines.push(`> ${heroEn.tagline.en}`);
   lines.push("");
   lines.push(
-    "Graffiti 101 is a Montreal-based studio teaching graffiti and street-art workshops to beginners and groups. Sessions are bilingual (English / French) and take place on legal walls or in-studio practice surfaces."
+    "Graffiti 101 is a Montreal-based team teaching graffiti and street-art workshops to beginners and groups. Sessions are bilingual (English / French) and run at the venue you book — typically legal walls, your school, or your community space."
   );
   lines.push("");
 
@@ -32,9 +32,6 @@ export async function GET() {
   lines.push(`- **Website (English):** ${localeUrl("en")}`);
   lines.push(`- **Website (Français):** ${localeUrl("fr")}`);
   lines.push("- **Languages:** English, French");
-  if (business.openingHours.length) {
-    lines.push(`- **Hours:** ${business.openingHours.join("; ")}`);
-  }
   lines.push("");
 
   lines.push("## Services");

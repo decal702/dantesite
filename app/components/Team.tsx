@@ -1,5 +1,4 @@
 import type { Content, Lang } from "@/lib/content";
-import { ui } from "@/lib/i18n";
 import Link from "next/link";
 import Reveal from "./Reveal";
 import SafeImage from "./SafeImage";
@@ -30,7 +29,7 @@ export default function Team({
             id="team-title"
             className="mt-2 font-sans text-3xl sm:text-5xl tracking-tight"
           >
-            {ui.about.teamHeading[lang]}
+            {labels.teamHeading?.[lang] ?? ""}
           </h2>
           <div className="mt-4 h-0.5 w-12 bg-brand-red" aria-hidden />
         </Reveal>

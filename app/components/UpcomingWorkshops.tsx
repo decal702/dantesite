@@ -66,24 +66,10 @@ export default function UpcomingWorkshops({
   return (
     <section
       id="schedule"
-      aria-labelledby="schedule-title"
       className="bg-brand-cream text-brand-black py-20 sm:py-28"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <Reveal>
-          <p className="font-heading text-brand-red tracking-widest uppercase text-sm">
-            {ui.eyebrow[lang]}
-          </p>
-          <h2
-            id="schedule-title"
-            className="mt-2 font-sans text-3xl sm:text-5xl tracking-tight"
-          >
-            {ui.title[lang]}
-          </h2>
-          <div className="mt-4 h-0.5 w-12 bg-brand-red" aria-hidden />
-        </Reveal>
-
-        <Reveal delay={100} className="mt-10">
           <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {upcoming.map((w) => {
               const svc = services.find((s) => s.id === w.serviceId);

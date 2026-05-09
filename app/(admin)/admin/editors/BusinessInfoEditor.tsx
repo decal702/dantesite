@@ -141,7 +141,7 @@ export default function BusinessInfoEditor({
             patch({ geo: { ...data.geo, lat: Number(v) || 0 } })
           }
           placeholder="45.5231"
-          hint="Get from Google Maps: right-click the studio pin → click coords to copy."
+          hint="Get from Google Maps: right-click the location pin → click coords to copy."
         />
         <TextInput
           label="Longitude"

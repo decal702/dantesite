@@ -28,7 +28,6 @@ export default function QuoteForm({ lang }: { lang: Lang }) {
       groupSize: String(fd.get("groupSize") || ""),
       ageRange: String(fd.get("ageRange") || ""),
       preferredDates: String(fd.get("preferredDates") || ""),
-      venue: String(fd.get("venue") || ""),
       budgetRange: String(fd.get("budgetRange") || ""),
       message: String(fd.get("message") || ""),
       website: String(fd.get("website") || ""),
@@ -108,24 +107,6 @@ export default function QuoteForm({ lang }: { lang: Lang }) {
         name="preferredDates"
         type="text"
       />
-
-      <label className="block">
-        <span className="font-sans tracking-widest uppercase text-sm">
-          {ui.quote.fields.venue[lang]}
-        </span>
-        <select name="venue" required className={inputCls} defaultValue="">
-          <option value="" disabled>
-            —
-          </option>
-          <option value="our-studio">
-            {ui.quote.venueOptions.ourStudio[lang]}
-          </option>
-          <option value="our-site">
-            {ui.quote.venueOptions.ourSite[lang]}
-          </option>
-          <option value="either">{ui.quote.venueOptions.either[lang]}</option>
-        </select>
-      </label>
 
       <label className="block">
         <span className="font-sans tracking-widest uppercase text-sm">

@@ -35,7 +35,9 @@ export default function AdminRootLayout({
       lang="en"
       className={`${display.variable} ${heading.variable} ${inter.variable}`}
     >
-      <body className="min-h-dvh flex flex-col antialiased">{children}</body>
+      <body className="min-h-dvh flex flex-col antialiased bg-brand-cream text-brand-black">
+        {children}
+      </body>
     </html>
   );
 }

@@ -64,7 +64,6 @@ export default async function ForOrganizationsPage({
   const org = content.organizations;
   const services = content.services;
   const labels = content.labels.organizations;
-  const pdfUrl = org.pdfUrl[lang] || org.pdfUrl.en || org.pdfUrl.fr;
 
   return (
     <>
@@ -174,36 +173,6 @@ export default async function ForOrganizationsPage({
                   </li>
                 ))}
               </ul>
-            </Reveal>
-          </div>
-        </section>
-
-        <section className="bg-brand-yellow text-brand-black py-16 sm:py-20">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6">
-            <Reveal>
-              <h2 className="font-heading text-2xl sm:text-4xl tracking-tight">
-                {ui.organizations.pdfHeading[lang]}
-              </h2>
-              <div className="mt-4 h-0.5 w-12 bg-brand-red" aria-hidden />
-              <p className="mt-6 max-w-2xl text-lg leading-relaxed">
-                {ui.organizations.pdfBlurb[lang]}
-              </p>
-              <div className="mt-6 flex flex-wrap gap-3">
-                {pdfUrl ? (
-                  <a
-                    href={pdfUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center px-6 py-3 bg-brand-black text-brand-yellow font-semibold uppercase tracking-wider hover:bg-brand-red transition-colors"
-                  >
-                    {ui.organizations.pdfDownload[lang]}
-                  </a>
-                ) : (
-                  <p className="text-sm text-brand-black/70">
-                    {ui.organizations.pdfPending[lang]}
-                  </p>
-                )}
-              </div>
             </Reveal>
           </div>
         </section>

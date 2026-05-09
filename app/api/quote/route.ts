@@ -5,12 +5,6 @@ import type { Lang } from "@/lib/content";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-const VENUE_LABELS: Record<string, string> = {
-  "our-studio": "Mile-End studio (yours)",
-  "our-site": "At their site",
-  either: "Either works",
-};
-
 const BUDGET_LABELS: Record<string, string> = {
   "under-500": "Under $500",
   "500-1000": "$500 – $1,000",
@@ -39,7 +33,6 @@ export async function POST(req: NextRequest) {
   const groupSize = String(body.groupSize ?? "").trim();
   const ageRange = String(body.ageRange ?? "").trim();
   const preferredDates = String(body.preferredDates ?? "").trim();
-  const venue = String(body.venue ?? "").trim();
   const budgetRange = String(body.budgetRange ?? "").trim();
   const message = String(body.message ?? "").trim();
   const lang: Lang = body.lang === "fr" ? "fr" : "en";
@@ -49,8 +42,7 @@ export async function POST(req: NextRequest) {
     !contactName ||
     !email ||
     !groupSize ||
-    !ageRange ||
-    !venue
+    !ageRange
   ) {
     return NextResponse.json(
       { error: "Required fields missing." },
@@ -66,7 +58,6 @@ export async function POST(req: NextRequest) {
     groupSize.length > 80 ||
     ageRange.length > 80 ||
     preferredDates.length > 200 ||
-    venue.length > 50 ||
     budgetRange.length > 50 ||
     message.length > 5000
   ) {
@@ -92,7 +83,6 @@ export async function POST(req: NextRequest) {
   const resend = new Resend(apiKey);
   const recipient = content.contact.recipientEmail;
 
-  const venueLabel = VENUE_LABELS[venue] || venue;
   const budgetLabel = budgetRange
     ? BUDGET_LABELS[budgetRange] || budgetRange
     : "Not specified";
@@ -111,7 +101,6 @@ export async function POST(req: NextRequest) {
         `Group size: ${groupSize}\n` +
         `Age range: ${ageRange}\n` +
         (preferredDates ? `Preferred dates: ${preferredDates}\n` : "") +
-        `Venue: ${venueLabel}\n` +
         `Budget: ${budgetLabel}\n` +
         (message ? `\nMessage:\n${message}\n` : ""),
     });

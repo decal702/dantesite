@@ -1,5 +1,4 @@
 import type { Content, Lang } from "@/lib/content";
-import { ui } from "@/lib/i18n";
 import Reveal from "./Reveal";
 
 export default function Testimonials({
@@ -30,7 +29,7 @@ export default function Testimonials({
 
         {data.length === 0 ? (
           <p className="mt-6 text-lg text-brand-black/70">
-            {ui.testimonials.empty[lang]}
+            {labels.empty?.[lang] ?? ""}
           </p>
         ) : (
           <Reveal delay={100} className="mt-10">

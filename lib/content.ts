@@ -76,6 +76,17 @@ export type SectionLabels = {
   intro?: Bilingual;
 };
 
+export type AboutLabels = SectionLabels & {
+  missionHeading?: Bilingual;
+  visionHeading?: Bilingual;
+  teamHeading?: Bilingual;
+  projectsHeading?: Bilingual;
+};
+
+export type TestimonialsLabels = SectionLabels & {
+  empty?: Bilingual;
+};
+
 export type SectionLabelKey =
   | "about"
   | "services"
@@ -86,7 +97,16 @@ export type SectionLabelKey =
   | "contact"
   | "organizations";
 
-export type Labels = Record<SectionLabelKey, SectionLabels>;
+export type Labels = {
+  about: AboutLabels;
+  services: SectionLabels;
+  store: SectionLabels;
+  testimonials: TestimonialsLabels;
+  faq: SectionLabels;
+  socials: SectionLabels;
+  contact: SectionLabels;
+  organizations: SectionLabels;
+};
 
 export type BusinessInfo = {
   legalName: string;

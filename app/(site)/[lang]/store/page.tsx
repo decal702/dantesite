@@ -14,12 +14,12 @@ const SEO: Record<Lang, { title: string; description: string }> = {
   en: {
     title: "Store — Graffiti 101 Montreal",
     description:
-      "Take some Graffiti 101 home — beginner spray cap kits, original prints, and branded merch from our Montreal studio. Inquire by message for shipping and payment.",
+      "Take some Graffiti 101 home — beginner spray cap kits, original prints, and branded merch from our Montreal team. Inquire by message for shipping and payment.",
   },
   fr: {
     title: "Boutique — Graffiti 101 Montréal",
     description:
-      "Rapportez un bout de Graffiti 101 chez vous — kits de capuchons pour débutants, estampes originales et articles promotionnels de notre studio montréalais. Contactez-nous pour l'expédition et le paiement.",
+      "Rapportez un bout de Graffiti 101 chez vous — kits de capuchons pour débutants, estampes originales et articles promotionnels de notre équipe montréalaise. Contactez-nous pour l'expédition et le paiement.",
   },
 };
 
