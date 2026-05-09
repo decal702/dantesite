@@ -17,14 +17,11 @@ export default function Testimonials({
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <Reveal>
-          <p className="font-heading text-brand-red tracking-widest uppercase text-sm">
-            {ui.testimonials.eyebrow[lang]}
-          </p>
           <h2
             id="testimonials-title"
-            className="mt-2 font-sans text-3xl sm:text-5xl tracking-tight"
+            className="font-sans text-3xl sm:text-5xl tracking-tight"
           >
-            {ui.testimonials.title[lang]}
+            {ui.testimonials.eyebrow[lang]}
           </h2>
           <div className="mt-4 h-0.5 w-12 bg-brand-red" aria-hidden />
         </Reveal>

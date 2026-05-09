@@ -18,17 +18,13 @@ export default function Store({
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <Reveal>
-          <p className="font-heading text-brand-red tracking-widest uppercase text-sm">
-            {ui.store.eyebrow[lang]}
-          </p>
           <h2
             id="store-title"
-            className="mt-2 font-sans text-3xl sm:text-5xl tracking-tight"
+            className="font-sans text-3xl sm:text-5xl tracking-tight"
           >
-            {ui.store.title[lang]}
+            {ui.store.eyebrow[lang]}
           </h2>
           <div className="mt-4 h-0.5 w-12 bg-brand-red" aria-hidden />
-          <p className="mt-6 max-w-2xl text-lg">{ui.store.intro[lang]}</p>
         </Reveal>
 
         {data.length > 0 && (
