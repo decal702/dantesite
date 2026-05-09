@@ -59,7 +59,9 @@ export default async function SiteRootLayout({
       lang={lang}
       className={`${display.variable} ${heading.variable} ${inter.variable}`}
     >
-      <body className="min-h-dvh flex flex-col antialiased">{children}</body>
+      <body className="min-h-dvh flex flex-col antialiased bg-brand-black text-brand-yellow">
+        {children}
+      </body>
     </html>
   );
 }
