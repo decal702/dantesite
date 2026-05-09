@@ -82,80 +82,8 @@
       "en": "Graffiti 101 is a structured, bilingual creative-arts program designed for schools, community centres, and youth organizations. We turn Montreal's signature visual culture into hands-on educational programming — safe, inclusive, and grant-fundable.",
       "fr": "Graffiti 101 est un programme d'arts créatifs structuré et bilingue, conçu pour les écoles, les maisons de jeunes et les organismes communautaires. Nous transformons la culture visuelle emblématique de Montréal en programmation éducative concrète — sécuritaire, inclusive et admissible aux subventions."
     },
-    "outcomes": [
-      {
-        "id": "outcome-confidence",
-        "text": {
-          "en": "Builds confidence and creative self-expression",
-          "fr": "Renforce la confiance en soi et l'expression créative"
-        }
-      },
-      {
-        "id": "outcome-skills",
-        "text": {
-          "en": "Develops fine motor skills and visual literacy",
-          "fr": "Développe la motricité fine et la littératie visuelle"
-        }
-      },
-      {
-        "id": "outcome-identity",
-        "text": {
-          "en": "Connects youth to Montreal's cultural identity",
-          "fr": "Relie les jeunes à l'identité culturelle de Montréal"
-        }
-      },
-      {
-        "id": "outcome-channeling",
-        "text": {
-          "en": "Channels artistic energy into legitimate creative practice",
-          "fr": "Canalise l'énergie artistique vers une pratique créative légitime"
-        }
-      },
-      {
-        "id": "outcome-inclusive",
-        "text": {
-          "en": "Inclusive of all skill levels; designed for ages 14+",
-          "fr": "Accessible à tous les niveaux; conçu pour les 14 ans et plus"
-        }
-      }
-    ],
-    "practicalItems": [
-      {
-        "id": "practical-safety",
-        "text": {
-          "en": "Safety first — water-based aerosols where possible, ventilated practice walls, full PPE provided",
-          "fr": "Sécurité d'abord — aérosols à l'eau lorsque possible, murs d'entraînement ventilés, équipement de protection fourni"
-        }
-      },
-      {
-        "id": "practical-materials",
-        "text": {
-          "en": "Materials and cleanup are fully included — your venue does nothing",
-          "fr": "Le matériel et le nettoyage sont entièrement inclus — votre lieu n'a rien à fournir"
-        }
-      },
-      {
-        "id": "practical-bilingual",
-        "text": {
-          "en": "Full bilingual delivery — sessions run in English or French",
-          "fr": "Prestation entièrement bilingue — sessions en anglais ou en français"
-        }
-      },
-      {
-        "id": "practical-groups",
-        "text": {
-          "en": "Group sizes 8 to 30; custom programming available for larger groups",
-          "fr": "Groupes de 8 à 30 personnes; programmation sur mesure pour les groupes plus grands"
-        }
-      },
-      {
-        "id": "practical-location",
-        "text": {
-          "en": "Workshops run at your site or our Mile-End studio",
-          "fr": "Les ateliers se déroulent chez vous ou à notre studio du Mile-End"
-        }
-      }
-    ],
+    "outcomes": [],
+    "practicalItems": [],
     "pdfUrl": {
       "en": "",
       "fr": ""
