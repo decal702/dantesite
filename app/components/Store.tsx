@@ -5,9 +5,11 @@ import Reveal from "./Reveal";
 
 export default function Store({
   data,
+  labels,
   lang,
 }: {
   data: Content["store"];
+  labels: Content["labels"]["store"];
   lang: Lang;
 }) {
   return (
@@ -22,7 +24,7 @@ export default function Store({
             id="store-title"
             className="font-sans text-3xl sm:text-5xl tracking-tight"
           >
-            {ui.store.eyebrow[lang]}
+            {labels.title?.[lang] ?? ""}
           </h2>
           <div className="mt-4 h-0.5 w-12 bg-brand-red" aria-hidden />
         </Reveal>

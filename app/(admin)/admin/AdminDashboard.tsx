@@ -14,6 +14,7 @@ import SocialsEditor from "./editors/SocialsEditor";
 import OrganizationsEditor from "./editors/OrganizationsEditor";
 import FaqEditor from "./editors/FaqEditor";
 import BusinessInfoEditor from "./editors/BusinessInfoEditor";
+import LabelsEditor from "./editors/LabelsEditor";
 import FooterEditor from "./editors/FooterEditor";
 import AdminSidebar, {
   GROUPS,
@@ -186,6 +187,14 @@ export default function AdminDashboard({
             data={content.organizations}
             onChange={(v) => update("organizations", v)}
             {...common("organizations")}
+          />
+        );
+      case "labels":
+        return (
+          <LabelsEditor
+            data={content.labels}
+            onChange={(v) => update("labels", v)}
+            {...common("labels")}
           />
         );
       case "footer":

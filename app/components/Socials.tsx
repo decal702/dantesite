@@ -1,12 +1,13 @@
 import type { Content, Lang } from "@/lib/content";
-import { ui } from "@/lib/i18n";
 import Reveal from "./Reveal";
 
 export default function Socials({
   data,
+  labels,
   lang,
 }: {
   data: Content["socials"];
+  labels: Content["labels"]["socials"];
   lang: Lang;
 }) {
   if (data.length === 0) return null;
@@ -19,17 +20,17 @@ export default function Socials({
     >
       <Reveal className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
         <p className="font-heading text-brand-red tracking-widest uppercase text-sm">
-          {ui.socials.eyebrow[lang]}
+          {labels.eyebrow?.[lang] ?? ""}
         </p>
         <h2
           id="socials-title"
           className="mt-2 font-sans text-2xl sm:text-4xl tracking-tight"
         >
-          {ui.socials.title[lang]}
+          {labels.title?.[lang] ?? ""}
         </h2>
         <div className="mt-4 h-0.5 w-12 bg-brand-red mx-auto" aria-hidden />
         <p className="mt-6 max-w-xl mx-auto text-base">
-          {ui.socials.intro[lang]}
+          {labels.intro?.[lang] ?? ""}
         </p>
 
         <ul className="mt-8 flex flex-wrap justify-center gap-3">

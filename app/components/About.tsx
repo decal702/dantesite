@@ -5,9 +5,11 @@ import SafeImage from "./SafeImage";
 
 export default function About({
   data,
+  labels,
   lang,
 }: {
   data: Content["about"];
+  labels: Content["labels"]["about"];
   lang: Lang;
 }) {
   return (
@@ -19,13 +21,13 @@ export default function About({
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <Reveal>
           <p className="font-heading text-brand-red tracking-widest uppercase text-sm">
-            {ui.about.eyebrow[lang]}
+            {labels.eyebrow?.[lang] ?? ""}
           </p>
           <h2
             id="about-title"
             className="mt-2 font-sans text-3xl sm:text-5xl tracking-tight"
           >
-            {ui.about.title[lang]}
+            {labels.title?.[lang] ?? ""}
           </h2>
           <div className="mt-4 h-0.5 w-12 bg-brand-red" aria-hidden />
         </Reveal>

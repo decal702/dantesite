@@ -4,9 +4,11 @@ import Reveal from "./Reveal";
 
 export default function Testimonials({
   data,
+  labels,
   lang,
 }: {
   data: Content["testimonials"];
+  labels: Content["labels"]["testimonials"];
   lang: Lang;
 }) {
   return (
@@ -21,7 +23,7 @@ export default function Testimonials({
             id="testimonials-title"
             className="font-sans text-3xl sm:text-5xl tracking-tight"
           >
-            {ui.testimonials.eyebrow[lang]}
+            {labels.title?.[lang] ?? ""}
           </h2>
           <div className="mt-4 h-0.5 w-12 bg-brand-red" aria-hidden />
         </Reveal>

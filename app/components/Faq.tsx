@@ -1,11 +1,12 @@
 import type { Content, Lang } from "@/lib/content";
-import { ui } from "@/lib/i18n";
 
 export default function Faq({
   data,
+  labels,
   lang,
 }: {
   data: Content["faq"];
+  labels: Content["labels"]["faq"];
   lang: Lang;
 }) {
   if (data.length === 0) return null;
@@ -18,16 +19,18 @@ export default function Faq({
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         <p className="font-heading text-brand-red tracking-widest uppercase text-sm">
-          {ui.faq.eyebrow[lang]}
+          {labels.eyebrow?.[lang] ?? ""}
         </p>
         <h2
           id="faq-title"
           className="mt-2 font-sans text-3xl sm:text-5xl tracking-tight"
         >
-          {ui.faq.title[lang]}
+          {labels.title?.[lang] ?? ""}
         </h2>
         <div className="mt-4 h-0.5 w-12 bg-brand-red" aria-hidden />
-        <p className="mt-6 text-lg text-brand-black/80">{ui.faq.intro[lang]}</p>
+        <p className="mt-6 text-lg text-brand-black/80">
+          {labels.intro?.[lang] ?? ""}
+        </p>
 
         <ul className="mt-10 grid gap-3">
           {data.map((q) => (

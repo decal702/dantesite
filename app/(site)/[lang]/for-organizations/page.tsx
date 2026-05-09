@@ -63,6 +63,7 @@ export default async function ForOrganizationsPage({
   const lang = raw as Lang;
   const org = content.organizations;
   const services = content.services;
+  const labels = content.labels.organizations;
   const pdfUrl = org.pdfUrl[lang] || org.pdfUrl.en || org.pdfUrl.fr;
 
   return (
@@ -73,10 +74,10 @@ export default async function ForOrganizationsPage({
           <div className="max-w-5xl mx-auto px-4 sm:px-6">
             <Reveal>
               <p className="font-heading text-brand-red tracking-widest uppercase text-sm">
-                {ui.organizations.eyebrow[lang]}
+                {labels.eyebrow?.[lang] ?? ""}
               </p>
               <h1 className="mt-2 font-heading text-3xl sm:text-5xl tracking-tight">
-                {ui.organizations.title[lang]}
+                {labels.title?.[lang] ?? ""}
               </h1>
               <div className="mt-4 h-0.5 w-12 bg-brand-red" aria-hidden />
               <p className="mt-6 max-w-2xl text-lg leading-relaxed">

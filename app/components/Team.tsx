@@ -6,9 +6,11 @@ import SafeImage from "./SafeImage";
 
 export default function Team({
   data,
+  labels,
   lang,
 }: {
   data: Content["about"]["team"];
+  labels: Content["labels"]["about"];
   lang: Lang;
 }) {
   if (data.length === 0) return null;
@@ -22,7 +24,7 @@ export default function Team({
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <Reveal>
           <p className="font-heading text-brand-red tracking-widest uppercase text-sm">
-            {ui.about.eyebrow[lang]}
+            {labels.eyebrow?.[lang] ?? ""}
           </p>
           <h2
             id="team-title"

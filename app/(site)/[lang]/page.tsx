@@ -99,15 +99,31 @@ export default async function Home({
       <Nav lang={lang} />
       <main className="flex-1">
         <Hero data={content.hero} lang={lang} />
-        <About data={content.about} lang={lang} />
-        <Services data={content.services} lang={lang} />
+        <About
+          data={content.about}
+          labels={content.labels.about}
+          lang={lang}
+        />
+        <Services
+          data={content.services}
+          labels={content.labels.services}
+          lang={lang}
+        />
         <UpcomingWorkshops
           data={content.upcomingWorkshops}
           services={content.services}
           lang={lang}
         />
-        <Contact data={content.contact} lang={lang} />
-        <Socials data={content.socials} lang={lang} />
+        <Contact
+          data={content.contact}
+          labels={content.labels.contact}
+          lang={lang}
+        />
+        <Socials
+          data={content.socials}
+          labels={content.labels.socials}
+          lang={lang}
+        />
       </main>
       <Footer data={content.footer} lang={lang} />
     </>

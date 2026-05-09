@@ -5,9 +5,11 @@ import SafeImage from "./SafeImage";
 
 export default function Services({
   data,
+  labels,
   lang,
 }: {
   data: Content["services"];
+  labels: Content["labels"]["services"];
   lang: Lang;
 }) {
   return (
@@ -19,17 +21,17 @@ export default function Services({
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <Reveal>
           <p className="font-heading text-brand-yellow tracking-widest uppercase text-sm">
-            {ui.services.eyebrow[lang]}
+            {labels.eyebrow?.[lang] ?? ""}
           </p>
           <h2
             id="services-title"
             className="mt-2 font-sans text-3xl sm:text-5xl tracking-tight"
           >
-            {ui.services.title[lang]}
+            {labels.title?.[lang] ?? ""}
           </h2>
           <div className="mt-4 h-0.5 w-12 bg-brand-red" aria-hidden />
           <p className="mt-6 max-w-2xl text-lg text-brand-yellow/80">
-            {ui.services.intro[lang]}
+            {labels.intro?.[lang] ?? ""}
           </p>
         </Reveal>
 

@@ -66,8 +66,16 @@ export default async function FaqPage({
       <StructuredData content={content} lang={lang} page="faq" />
       <Nav lang={lang} />
       <main className="flex-1">
-        <Faq data={content.faq} lang={lang} />
-        <Testimonials data={content.testimonials} lang={lang} />
+        <Faq
+          data={content.faq}
+          labels={content.labels.faq}
+          lang={lang}
+        />
+        <Testimonials
+          data={content.testimonials}
+          labels={content.labels.testimonials}
+          lang={lang}
+        />
       </main>
       <Footer data={content.footer} lang={lang} />
     </>

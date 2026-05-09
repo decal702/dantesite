@@ -70,6 +70,24 @@ export type OrganizationsContent = {
   pdfUrl: { en: string; fr: string };
 };
 
+export type SectionLabels = {
+  eyebrow?: Bilingual;
+  title?: Bilingual;
+  intro?: Bilingual;
+};
+
+export type SectionLabelKey =
+  | "about"
+  | "services"
+  | "store"
+  | "testimonials"
+  | "faq"
+  | "socials"
+  | "contact"
+  | "organizations";
+
+export type Labels = Record<SectionLabelKey, SectionLabels>;
+
 export type BusinessInfo = {
   legalName: string;
   streetAddress: string;
@@ -108,6 +126,7 @@ export type Content = {
   faq: FaqItem[];
   business: BusinessInfo;
   organizations: OrganizationsContent;
+  labels: Labels;
   footer: {
     tagline: Bilingual;
   };

@@ -12,6 +12,7 @@ export type SectionKey =
   | "contact"
   | "socials"
   | "organizations"
+  | "labels"
   | "footer";
 
 type Group = {
@@ -51,6 +52,10 @@ export const GROUPS: Group[] = [
       { key: "organizations", label: "Organizations" },
       { key: "footer", label: "Footer" },
     ],
+  },
+  {
+    label: "Site text",
+    items: [{ key: "labels", label: "Section labels" }],
   },
 ];
 

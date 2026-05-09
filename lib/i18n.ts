@@ -28,29 +28,15 @@ export const ui = {
     secondaryCta: { en: "See what we offer", fr: "Voir nos services" },
   },
   about: {
-    eyebrow: { en: "About", fr: "À propos" },
-    title: { en: "Who we are", fr: "Qui sommes-nous" },
     missionHeading: { en: "Mission", fr: "Mission" },
     visionHeading: { en: "Vision", fr: "Vision" },
     teamHeading: { en: "The team", fr: "L'équipe" },
     projectsHeading: { en: "Past projects", fr: "Projets passés" },
   },
   services: {
-    eyebrow: { en: "Services", fr: "Services" },
-    title: { en: "What we offer", fr: "Ce que nous offrons" },
-    intro: {
-      en: "From a first-timer's introduction to private coaching for working writers — pricing in Canadian dollars, materials always included.",
-      fr: "De l'introduction pour débutants au coaching privé pour artistes établis — prix en dollars canadiens, matériel toujours inclus.",
-    },
     comingSoon: { en: "Coming soon", fr: "À venir" },
   },
   store: {
-    eyebrow: { en: "Store", fr: "Boutique" },
-    title: { en: "Take some home", fr: "Apportez-en chez vous" },
-    intro: {
-      en: "Pick something out — checkout happens by message. Tap any item below and we'll get back to you with shipping and payment options.",
-      fr: "Choisissez un article — le paiement se fait par message. Cliquez sur un article ci-dessous et nous vous répondrons avec les options d'expédition et de paiement.",
-    },
     contactToPurchase: {
       en: "Contact to purchase",
       fr: "Contacter pour acheter",
@@ -58,35 +44,14 @@ export const ui = {
     inquiryPrefix: { en: "Inquiry", fr: "Demande" },
   },
   testimonials: {
-    eyebrow: { en: "Reviews", fr: "Avis" },
-    title: { en: "What people say", fr: "Ce que les gens en disent" },
     empty: {
       en: "Reviews coming soon.",
       fr: "Avis à venir.",
     },
   },
-  faq: {
-    eyebrow: { en: "FAQ", fr: "FAQ" },
-    title: {
-      en: "Common questions",
-      fr: "Questions fréquentes",
-    },
-    intro: {
-      en: "If your question isn't answered below, send us a message.",
-      fr: "Si vous ne trouvez pas votre réponse ci-dessous, écrivez-nous.",
-    },
-  },
-  socials: {
-    eyebrow: { en: "Follow", fr: "Suivez-nous" },
-    title: { en: "Stay in the loop", fr: "Restez à l'affût" },
-    intro: {
-      en: "Latest pieces, workshop announcements, behind-the-scenes from sessions.",
-      fr: "Dernières pièces, annonces d'ateliers, coulisses des sessions.",
-    },
-  },
+  faq: {},
+  socials: {},
   contact: {
-    eyebrow: { en: "Contact", fr: "Contact" },
-    title: { en: "Drop us a line", fr: "Écrivez-nous" },
     fields: {
       name: { en: "Name", fr: "Nom" },
       email: { en: "Email", fr: "Courriel" },
@@ -106,11 +71,6 @@ export const ui = {
     },
   },
   organizations: {
-    eyebrow: { en: "For organizations", fr: "Pour les organismes" },
-    title: {
-      en: "Workshops for schools & youth groups",
-      fr: "Ateliers pour les écoles et les groupes de jeunes",
-    },
     outcomesHeading: {
       en: "What participants take away",
       fr: "Ce que les participants en retirent",
