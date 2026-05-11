@@ -79,8 +79,8 @@
   },
   "organizations": {
     "intro": {
-      "en": "Graffiti 101 is a structured, bilingual creative-arts program designed for schools, community centres, and youth organizations. We turn Montreal's signature visual culture into hands-on educational programming — safe, inclusive, and grant-fundable.",
-      "fr": "Graffiti 101 est un programme d'arts créatifs structuré et bilingue, conçu pour les écoles, les maisons de jeunes et les organismes communautaires. Nous transformons la culture visuelle emblématique de Montréal en programmation éducative concrète — sécuritaire, inclusive et admissible aux subventions."
+      "en": "Graffiti 101 is a structured, bilingual creative-arts program designed for schools, community centres, and youth organizations. We turn the spontaneity and exploration of Graffiti into hands-on educational programming — safe, inclusive, and grant-fundable.",
+      "fr": ""
     },
     "outcomes": [],
     "practicalItems": [],
@@ -183,13 +183,34 @@
       }
     },
     "nav": {
-      "home": { "en": "Home", "fr": "Accueil" },
-      "about": { "en": "About", "fr": "À propos" },
-      "services": { "en": "Services", "fr": "Services" },
-      "store": { "en": "Store", "fr": "Boutique" },
-      "faq": { "en": "FAQ", "fr": "FAQ" },
-      "forOrganizations": { "en": "For organizations", "fr": "Pour les organismes" },
-      "contact": { "en": "Contact", "fr": "Contact" }
+      "home": {
+        "en": "Home",
+        "fr": "Accueil"
+      },
+      "about": {
+        "en": "About",
+        "fr": "À propos"
+      },
+      "services": {
+        "en": "Services",
+        "fr": "Services"
+      },
+      "store": {
+        "en": "Store",
+        "fr": "Boutique"
+      },
+      "faq": {
+        "en": "FAQ",
+        "fr": "FAQ"
+      },
+      "forOrganizations": {
+        "en": "For organizations",
+        "fr": "Pour les organismes"
+      },
+      "contact": {
+        "en": "Contact",
+        "fr": "Contact"
+      }
     }
   },
   "footer": {
